@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    SODIC | سوديك للتطوير العقاري في مصر
+  </title>
+
+  <meta name="description"
+    content="SODIC — أحد أكبر المطورين العقاريين في مصر بخبرة تتجاوز 20 عامًا، يقدم مشروعات سكنية وتجارية متميزة مثل SODIC East Vale و Ogami Ras El Hekma و SODIC East New Heliopolis في أرقى المواقع.">
+
+  <meta name="keywords"
+    content="SODIC, سوديك, SODIC East Vale, Ogami Ras El Hekma, SODIC East, New Heliopolis, مدينة المستقبل, عقارات مصر, القاهرة الجديدة, الساحل الشمالي, العاصمة الإدارية الجديدة">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts: Tajawal everywhere -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Editorial Layer (frontend-design skill) -->
+  <link href="assets/css/editorial.css" rel="stylesheet">
+
+</head>
+
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+
+      <!-- Logo — left -->
+      <a href="index.html" class="logo d-flex align-items-center ure-logo-side">
+        <img src="assets/img/logo.webp" alt="URE Logo">
+      </a>
+
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <!-- Desktop nav links — true center -->
+      <nav class="ure-navmenu d-none d-lg-flex align-items-center gap-3" dir="rtl">
+        <a href="#projects">مشروعاتنا</a>
+      </nav>
+
+      <!-- CTA — desktop only -->
+      <div class="ure-logo-side d-none d-lg-flex justify-content-end align-items-center">
+        <a class="btn-getstarted" data-bs-toggle="modal" data-bs-target="#staticBackdrop">سجّل الآن</a>
+      </div>
+
+      <!-- Hamburger — mobile only -->
+      <button class="ure-mobile-toggle d-lg-none" id="ureMobileToggle" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile fullscreen drawer -->
+    <div class="ure-mobile-menu" id="ureMobileMenu" dir="rtl">
+
+      <!-- Eyebrow -->
+      <p class="ure-drawer-eyebrow">— Menu</p>
+
+      <!-- Nav links -->
+      <nav class="ure-drawer-nav">
+        <a href="#projects"
+          onclick="document.getElementById('ureMobileMenu').classList.remove('open');document.getElementById('ureMobileToggle').classList.remove('open');">مشروعاتنا</a>
+      </nav>
+
+      <!-- Sign-in CTA -->
+      <a class="ure-mobile-cta" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+        onclick="document.getElementById('ureMobileMenu').classList.remove('open');document.getElementById('ureMobileToggle').classList.remove('open');">
+        سجّل الآن
+      </a>
+
+      <!-- Bottom: brand text + disclaimer -->
+      <div class="ure-drawer-foot">
+        <div class="ure-drawer-brand">
+          <span><em>SODIC</em><small>Developer</small></span>
+          <span class="ure-drawer-divider"></span>
+          <span><em>URE</em><small>Brokerage</small></span>
+        </div>
+        <p class="ure-drawer-disclaimer">
+          نحن URE شركة وساطة عقارية مرخّصة ومستقلة،
+          ومخوّلة بتسويق وحدات SODIC.
+          لسنا الموقع الرسمي أو الجهة المالكة للمطوّر.
+        </p>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section hero-solid">
+
+      <div class="container">
+
+        <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-xl-6 col-lg-8">
+            <h2>امتلك وحدتك في إحدى مشاريع
+            </h2>
+            <h2> SODIC
+            </h2>
+
+
+            <p style="text-align: right;">
+              مع SODIC تستمتع بأسلوب حياة استثنائي وأعلى معايير التصميم والتشطيب وسط مجتمعات سكنية
+              متكاملة في أرقى المواقع داخل القاهرة الجديدة والساحل الشمالي والعاصمة الإدارية الجديدة، مع ضمان أفضل عائد استثماري لعملائنا.
+            </p>
+            <br>
+          </div>
+
+
+          <br>
+          <div class="">
+
+            <a href="#register" class="btn-register-out-side " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <i class="bi bi-person-check"></i> سجّل الآن </a>
+          </div>
+
+          <!-- Scroll-to-gallery indicator -->
+          <a href="#gallery" class="hero-scroll-cue" aria-label="عرض معرض المشروعات">
+            <span class="scroll-cue-label">شاهد معرض المشروعات</span>
+            <span class="scroll-cue-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 4v16"/>
+                <path d="M5 13l7 7 7-7"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+
+      </div>
+
+
+    </section><!-- /Hero Section -->
+
+    <!-- Gallery Section (under hero) -->
+    <section id="gallery" class="ure-gallery-section" dir="rtl">
+      <div class="container">
+
+        <div class="ure-gallery-header" data-aos="fade-up">
+          <h2 class="ure-gallery-title">معرض المشروعات</h2>
+          <div class="ure-gallery-line"></div>
+        </div>
+
+        <!-- Auto-cycling gallery slider -->
+        <div id="galleryCarousel" class="carousel slide ure-gallery-carousel" data-bs-ride="carousel"
+          data-bs-interval="3500" data-aos="fade-up" data-aos-delay="100" dir="ltr">
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+          </div>
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img src="assets/img/east/1.webp" class="d-block w-100" alt="SODIC East Vale">
+              <div class="carousel-caption"><span>SODIC East Vale</span></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/ogami/1.webp" class="d-block w-100" alt="Ogami Ras El Hekma">
+              <div class="carousel-caption"><span>Ogami Ras El Hekma</span></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/new/1.png" class="d-block w-100" alt="SODIC East New Heliopolis">
+              <div class="carousel-caption"><span>SODIC East</span></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/newlunch/1.jpg" class="d-block w-100" alt="The Estates SODIC">
+              <div class="carousel-caption"><span>The Estates</span></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/ogami/2.jpg" class="d-block w-100" alt="June Ras El Hekma">
+              <div class="carousel-caption"><span>June Ras El Hekma</span></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/newlunch/2.jpg" class="d-block w-100" alt="Caesar Sidi Abdel Rahman">
+              <div class="carousel-caption"><span>Caesar</span></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/newlunch/3.jpg" class="d-block w-100" alt="Eastown New Cairo">
+              <div class="carousel-caption"><span>Eastown</span></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/newlunch/4.jpg" class="d-block w-100" alt="Westown Sheikh Zayed">
+              <div class="carousel-caption"><span>Westown</span></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/newlunch/5.jpg" class="d-block w-100" alt="Allegria Sheikh Zayed">
+              <div class="carousel-caption"><span>Allegria</span></div>
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+    <!-- /Gallery Section -->
+
+    <!-- SODIC Mini Locations -->
+    <section class="lavista-mini-locations" dir="rtl">
+      <div class="container">
+        <div class="row align-items-center gy-3">
+
+          <!-- Text -->
+          <div class="col-lg-4 col-md-12">
+            <h4 style="text-align: center; font-size: 29px;">SODIC</h4>
+            <p style="text-align: center;">مشروعاتنا متاحة في أفضل المواقع داخل مصر</p>
+          </div>
+
+          <!-- Locations -->
+          <div class="col-lg-8 col-md-12">
+            <div class="locations-list">
+
+              <a href="#vea" class="location-new">
+                SODIC East Vale <small>طرح جديد</small>
+              </a>
+              <a href="#creektown" class="location-new">
+                Ogami Ras El Hekma <small>طرح جديد</small>
+              </a>
+              <a href="#mv-new-cairo" class="location-new">
+                SODIC East <small>طرح جديد</small>
+              </a>
+              <a href="#ednc" class="location-new">
+                EDNC – Eastown District <small>طرح جديد</small>
+              </a>
+
+              <a href="#glen">The Estates - Sheikh Zayed</a>
+              <a href="#safia">June Ras El Hekma</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- SODIC East Vale Highlight Section -->
+    <section id="vea" class="new-launch-section" dir="rtl">
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <!-- Content -->
+          <div class="col-lg-6 margin-mob-5" data-aos="fade-right">
+            <span class="launch-tag">طرح جديد</span>
+
+            <h2>SODIC East Vale</h2>
+            <h4>شرق القاهرة – مدينة المستقبل</h4>
+
+            <p class="launch-desc">
+              مرحبًا بكم في <strong>SODIC East Vale</strong>، مجتمع سكني متكامل
+              على مساحة تتجاوز <strong>500 فدان</strong> في قلب شرق القاهرة، يربط
+              <strong>القاهرة الجديدة</strong> بالعاصمة الإدارية الجديدة ويجمع بين
+              التصميم العصري والمساحات الخضراء وأسلوب حياة استثنائي.
+            </p>
+
+            <ul class="launch-features">
+              <li>مجتمع متكامل على أكثر من 500 فدان</li>
+              <li>تنوع في الوحدات: شقق (1-3 غرف)، تاون هاوس، توين هاوس، فلل</li>
+              <li>موقع استراتيجي بين القاهرة الجديدة والعاصمة الإدارية</li>
+              <li>مساحات خضراء واسعة ومنطقة تجارية</li>
+              <li>خدمات متكاملة وأسلوب حياة عصري</li>
+              <li>أمن وحراسة على مدار 24/7</li>
+            </ul>
+
+            <div class="launch-units">
+              <p><strong>المرحلة الحالية:</strong></p>
+              <p>المشروع في مرحلته الأولى مع فتح باب تسجيل العملاء (EOI) — احجز اهتمامك مبكرًا للحصول على أفضل الوحدات وأنظمة سداد مرنة</p>
+            </div>
+
+            <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+              onclick="setProject('Sodic All In House')">
+              سجّل بياناتك الآن
+            </a>
+          </div>
+
+          <!-- Image -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="launch-image">
+              <img src="assets/img/east/2.webp" alt="SODIC East Vale" loading="lazy">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Ogami Ras El Hekma Highlight Section -->
+    <section id="creektown" class="new-launch-section" dir="rtl">
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <!-- Content -->
+          <div class="col-lg-6 margin-mob-5" data-aos="fade-right">
+            <span class="launch-tag">طرح جديد</span>
+
+            <h2>Ogami Ras El Hekma</h2>
+            <h4>الساحل الشمالي – رأس الحكمة</h4>
+
+            <p class="launch-desc">
+              يقدم <strong>SODIC</strong> مشروع <strong>Ogami</strong>،
+              مجتمع ساحلي فاخر مستوحى من التصميم الياباني بإطلالة مباشرة على
+              البحر الأبيض المتوسط في قلب رأس الحكمة، يجمع بين الطبيعة والهدوء
+              والتصميمات الراقية لتجربة مصيف لا مثيل لها.
+            </p>
+
+            <ul class="launch-features">
+              <li>إطلالة مباشرة على البحر الأبيض المتوسط</li>
+              <li>تصميم معماري ياباني عصري</li>
+              <li>إطلالات طبيعية ساحرة</li>
+              <li>مجتمعات مغلقة وخصوصية تامة</li>
+              <li>أنظمة أمن وحراسة متطورة</li>
+              <li>مساحات خضراء ومرافق ترفيهية متكاملة</li>
+            </ul>
+
+            <div class="launch-units">
+              <p><strong>الأسعار ونظام السداد:</strong></p>
+              <p>
+                الأسعار تبدأ من <strong>30,500,000 جنيه مصري</strong> — أنظمة سداد مرنة تصل حتى 8 سنوات
+              </p>
+            </div>
+
+            <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+              onclick="setProject('Sodic All In House')">
+              سجّل بياناتك الآن
+            </a>
+          </div>
+
+          <!-- Image -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="launch-image">
+              <img src="assets/img/ogami/3.jpg" alt="Ogami Ras El Hekma" loading="lazy">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SODIC East New Heliopolis Highlight Section -->
+    <section id="mv-new-cairo" class="new-launch-section" dir="rtl">
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <!-- Content -->
+          <div class="col-lg-6 margin-mob-5" data-aos="fade-right">
+            <span class="launch-tag">طرح جديد</span>
+
+            <h2>SODIC East</h2>
+            <h4>هليوبوليس الجديدة – شرق القاهرة</h4>
+
+            <p class="launch-desc">
+              عيش في واحد من أرقى مواقع شرق القاهرة داخل
+              <strong>هليوبوليس الجديدة</strong> مع مشروع
+              <strong>SODIC East</strong>، حيث الهدوء والخصوصية وسهولة الوصول لأهم
+              مرافق العاصمة. مجتمع سكني متكامل بتصميم عصري يركّز على أسلوب حياة متكامل
+              قريب من خدمات العاصمة الإدارية الجديدة.
+            </p>
+
+            <ul class="launch-features">
+              <li>موقع استراتيجي داخل هليوبوليس الجديدة</li>
+              <li>قريب من العاصمة الإدارية الجديدة ومرافقها</li>
+              <li>وحدات متنوعة: شقق، تاون هاوس، توين هاوس، فلل مستقلة</li>
+              <li>مساحات خضراء واسعة ومراكز تجارية</li>
+              <li>مرافق رياضية وترفيهية متكاملة</li>
+              <li>أنظمة أمن متطورة على مدار اليوم</li>
+              <li>تصميم عصري لأسلوب حياة عائلي راقٍ</li>
+            </ul>
+
+            <div class="launch-units">
+              <p><strong>الوحدات المتاحة:</strong></p>
+              <p>
+                شقق وتاون هاوس وتوين هاوس وفلل مستقلة بمساحات وتصميمات متنوعة
+                لتناسب مختلف الاحتياجات العائلية
+              </p>
+              <p><strong>نظام السداد:</strong></p>
+              <p>أنظمة سداد مرنة وخطط دفع تنافسية — للاستفسار سجّل بياناتك الآن</p>
+            </div>
+
+            <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+              onclick="setProject('Sodic All In House')">
+              سجّل بياناتك الآن
+            </a>
+          </div>
+
+          <!-- Image -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="launch-image">
+              <img src="assets/img/new/2.png" alt="SODIC East New Heliopolis" loading="lazy">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- EDNC – Eastown District New Cairo Highlight Section -->
+    <section id="ednc" class="new-launch-section" dir="rtl">
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <!-- Content -->
+          <div class="col-lg-6 margin-mob-5" data-aos="fade-right">
+            <span class="launch-tag">طرح جديد</span>
+
+            <h2>EDNC – Eastown District New Cairo</h2>
+            <h4>القاهرة الجديدة – التجمع الخامس</h4>
+
+            <p class="launch-desc">
+              <strong>عن مشروع EDNC</strong><br>
+              يُعد مشروع <strong>EDNC</strong> واحدًا من أبرز المشروعات التجارية والإدارية
+              في القاهرة الجديدة، حيث يوفر بيئة عمل متطورة تناسب الشركات ورواد الأعمال.
+            </p>
+
+            <p class="launch-desc"><strong>مميزات EDNC</strong></p>
+            <ul class="launch-features">
+              <li>موقع استراتيجي في التجمع الخامس</li>
+              <li>وحدات إدارية وتجارية متنوعة</li>
+              <li>تصميمات حديثة ومساحات مرنة</li>
+              <li>بيئة عمل احترافية</li>
+              <li>خدمات متكاملة (أمن – صيانة – إدارة)</li>
+              <li>فرصة استثمارية قوية بعائد مرتفع</li>
+            </ul>
+
+            <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+              onclick="setProject('Sodic All In House')">
+              سجّل بياناتك الآن
+            </a>
+          </div>
+
+          <!-- Image -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="launch-image">
+              <img src="assets/img/newlunch/11.jpg" alt="EDNC – Eastown District New Cairo" loading="lazy">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Cairo & Sheikh Zayed Projects Section -->
+    <section id="projects" class="projects section light-background" dir="rtl">
+      <div class="container" data-aos="fade-up">
+
+        <!-- Section Title -->
+        <div class="section-title text-center mb-5">
+          <h2>مشروعات SODIC</h2>
+          <br>
+          <br>
+
+          <p>القاهرة الجديدة وشرق القاهرة والشيخ زايد</p>
+        </div>
+
+        <div class="row gy-4 justify-content-center">
+
+          <!-- Project: The Estates -->
+          <div class="col-lg-4 col-md-6" id="glen">
+            <div class="project-card" style="--i:0" data-aos="fade-up" data-aos-delay="100">
+              <img src="assets/img/newlunch/6.jpg" alt="The Estates Sheikh Zayed" loading="lazy">
+
+              <div class="project-content">
+                <h3>The Estates</h3>
+
+                <p class="location">
+                  <i class="bi bi-geo-alt"></i>
+                  الشيخ زايد – غرب القاهرة
+                </p>
+
+                <p class="project-desc">
+                  مشروع <strong>The Estates</strong> من SODIC في قلب الشيخ زايد،
+                  مجتمع سكني فاخر يقدّم تنوعًا واسعًا في الوحدات وسط حدائق واسعة
+                  ومرافق متكاملة بأسلوب حياة عصري وراقٍ.
+                </p>
+
+                <ul class="features">
+                  <li>موقع متميز في الشيخ زايد</li>
+                  <li>حدائق ومسطحات خضراء واسعة</li>
+                  <li>مسارات للمشي والدراجات</li>
+                  <li>مناطق ترفيهية وتجارية</li>
+                  <li>وحدات متنوعة: شقق، تاون هاوس، توين هاوس، فلل</li>
+                  <li>تصميم عصري ومعايير جودة عالية</li>
+                  <li>أمن وحراسة 24/7</li>
+                </ul>
+
+                <div class="launch-units">
+                  <p><strong>نظام السداد:</strong> خطط سداد مرنة — للتفاصيل سجّل بياناتك</p>
+                </div>
+
+                <div class="btn-div">
+                  <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    onclick="setProject('Sodic All In House')">
+                    سجّل بياناتك الآن
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Eastown -->
+          <div class="col-lg-4 col-md-6" id="vea-card">
+            <div class="project-card" style="--i:1" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/img/newlunch/7.jpg" alt="Eastown New Cairo" loading="lazy">
+
+              <div class="project-content">
+                <h3>Eastown</h3>
+                <p class="location">
+                  <i class="bi bi-geo-alt"></i>
+                  القاهرة الجديدة – التجمع الخامس
+                </p>
+
+                <p class="project-desc">
+                  <strong>Eastown</strong> من SODIC مجتمع متكامل في قلب التجمع الخامس
+                  يجمع بين الراحة والخصوصية، يضم مزيجًا من الوحدات السكنية والمرافق التجارية
+                  والترفيهية لأسلوب حياة عصري راقٍ.
+                </p>
+
+                <ul class="features">
+                  <li>موقع حيوي في التجمع الخامس</li>
+                  <li>مزيج سكني وتجاري متكامل</li>
+                  <li>كثافة سكنية متوازنة</li>
+                  <li>وحدات سكنية بمساحات متنوعة</li>
+                  <li>مساحات خضراء واسعة</li>
+                  <li>قرب من المرافق الحيوية والمدارس</li>
+                  <li>أمن وحراسة على مدار اليوم</li>
+                </ul>
+
+                <div class="launch-units">
+                  <p><strong>نظام السداد:</strong> خطط دفع مرنة لتناسب احتياجاتك</p>
+                </div>
+
+                <div class="btn-div">
+                  <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    onclick="setProject('Sodic All In House')">
+                    سجّل بياناتك الآن
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Westown -->
+          <div class="col-lg-4 col-md-6" id="creektown-card">
+            <div class="project-card" style="--i:2" data-aos="fade-up" data-aos-delay="300">
+              <img src="assets/img/newlunch/8.jpg" alt="Westown Sheikh Zayed" loading="lazy">
+
+              <div class="project-content">
+                <h3>Westown</h3>
+                <p class="location">
+                  <i class="bi bi-geo-alt"></i>
+                  الشيخ زايد – غرب القاهرة
+                </p>
+
+                <p class="project-desc">
+                  <strong>Westown</strong> مجتمع متكامل من SODIC في الشيخ زايد،
+                  يجمع بين الوحدات السكنية والمكاتب الإدارية والمناطق التجارية
+                  بتصميم عصري ومرافق متطورة وأسلوب حياة فاخر.
+                </p>
+
+                <ul class="features">
+                  <li>موقع مميز في قلب الشيخ زايد</li>
+                  <li>مزيج سكني وتجاري وإداري</li>
+                  <li>تصميم عصري ومرافق راقية</li>
+                  <li>شقق وفلل ومكاتب</li>
+                  <li>مناطق تجارية ومطاعم</li>
+                  <li>مسارات للمشي ومساحات خضراء</li>
+                  <li>أمن وحراسة 24/7</li>
+                </ul>
+
+                <div class="launch-units">
+                  <p><strong>نظام السداد:</strong> خطط سداد مرنة — للتفاصيل سجّل بياناتك</p>
+                </div>
+
+                <div class="btn-div">
+                  <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    onclick="setProject('Sodic All In House')">
+                    سجّل بياناتك الآن
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- North Coast Projects Section -->
+    <section id="north-coast-projects" class="projects section light-background" dir="rtl">
+      <div class="container" data-aos="fade-up">
+
+        <!-- Section Title -->
+        <div class="section-title text-center mb-5">
+          <h2>مشروعات SODIC</h2>
+          <br>
+          <br>
+
+          <p>الساحل الشمالي</p>
+        </div>
+
+        <div class="row gy-4 justify-content-center">
+
+          <!-- June Ras El Hekma -->
+          <div class="col-lg-4 col-md-6" id="safia">
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+              <img src="assets/img/ogami/4.jpg" alt="June Ras El Hekma" loading="lazy">
+
+              <div class="project-content">
+                <h3>June Ras El Hekma</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i>
+                  الساحل الشمالي – رأس الحكمة
+                </p>
+
+                <p class="project-desc">
+                  منتجع <strong>June</strong> من SODIC في قلب رأس الحكمة،
+                  بإطلالة مباشرة على البحر الأبيض المتوسط وتصميم عصري
+                  يجمع بين الفخامة والطبيعة لتجربة مصيف استثنائية.
+                </p>
+
+                <ul class="features">
+                  <li>إطلالة مباشرة على البحر الأبيض المتوسط</li>
+                  <li>تصميم معاصر وفاخر</li>
+                  <li>شاطئ خاص ومرافق مائية</li>
+                  <li>وحدات متنوعة: شاليهات، تاون هاوس، فيلات</li>
+                  <li>مطاعم وكافيهات راقية</li>
+                  <li>أنظمة أمن وحراسة 24/7</li>
+                  <li>مسارات شاطئية ومناطق ترفيهية</li>
+                </ul>
+
+                <div class="launch-units">
+                  <p><strong>نظام السداد:</strong> خطط سداد مرنة — للتفاصيل سجّل بياناتك</p>
+                </div>
+
+                <div class="btn-div">
+                  <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    onclick="setProject('Sodic All In House')">
+                    سجّل بياناتك الآن
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Caesar Sidi Abdel Rahman -->
+          <div class="col-lg-4 col-md-6" id="crysta">
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+              <img src="assets/img/newlunch/9.jpg" alt="Caesar Sidi Abdel Rahman" loading="lazy">
+
+              <div class="project-content">
+                <h3>Caesar</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i>
+                  الساحل الشمالي – سيدي عبدالرحمن
+                </p>
+
+                <p class="project-desc">
+                  <strong>Caesar</strong> منتجع ساحلي راقٍ من SODIC في سيدي عبدالرحمن،
+                  يجمع بين الإطلالات البحرية الساحرة والتصميمات الفاخرة
+                  ومرافق ترفيهية متكاملة لتجربة عطلات لا تُنسى.
+                </p>
+
+                <ul class="features">
+                  <li>موقع متميز في سيدي عبدالرحمن</li>
+                  <li>إطلالات بحرية مباشرة</li>
+                  <li>شاطئ خاص ولاجونات</li>
+                  <li>مرافق رياضية وترفيهية</li>
+                  <li>مطاعم وكافيهات وخدمات راقية</li>
+                  <li>تصميمات عصرية وفاخرة</li>
+                  <li>أمن وحراسة 24/7</li>
+                </ul>
+
+                <div class="launch-units">
+                  <p><strong>نظام السداد:</strong> خطط سداد مرنة — للتفاصيل سجّل بياناتك</p>
+                </div>
+
+                <div class="btn-div">
+                  <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    onclick="setProject('Sodic All In House')">
+                    سجّل بياناتك الآن
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="alerts" id="alertContainer"></div>
+
+
+  <footer id="footer" class="footer dark-background" dir="rtl">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+
+          <!-- About -->
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center justify-content-center justify-content-md-start">
+              <span class="sitename">SODIC</span>
+            </a>
+
+            <p class="mt-3">
+              SODIC هي أحد أكبر المطورين العقاريين في مصر بخبرة تتجاوز 20 عامًا،
+              تقدم مشروعات سكنية وتجارية متكاملة تجمع بين الابتكار والفخامة والاستدامة
+              في أرقى المواقع داخل القاهرة الجديدة وشرق القاهرة والشيخ زايد والساحل الشمالي.
+            </p>
+
+          </div>
+
+          <!-- Useful Links -->
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>روابط سريعة</h4>
+            <ul>
+              <li><i class="bi bi-chevron-left"></i> <a href="#hero">الرئيسية</a></li>
+              <li><i class="bi bi-chevron-left"></i> <a href="#projects">المشروعات</a></li>
+              <li><i class="bi bi-chevron-left"></i> <a href="#register">سجّل الآن</a></li>
+            </ul>
+          </div>
+
+          <!-- Projects -->
+          <div class="col-lg-3 col-md-3 footer-links">
+            <h4>مشروعات SODIC</h4>
+            <ul>
+              <li><i class="bi bi-chevron-left"></i> <a href="#vea">SODIC East Vale</a></li>
+              <li><i class="bi bi-chevron-left"></i> <a href="#mv-new-cairo">SODIC East</a></li>
+              <li><i class="bi bi-chevron-left"></i> <a href="#creektown">Ogami Ras El Hekma</a></li>
+              <li><i class="bi bi-chevron-left"></i> <a href="#glen">The Estates</a></li>
+              <li><i class="bi bi-chevron-left"></i> <a href="#safia">June Ras El Hekma</a></li>
+              <li><i class="bi bi-chevron-left"></i> <a href="#crysta">Caesar</a></li>
+              <li><i class="bi bi-chevron-left"></i> <a href="#ednc">EDNC – Eastown District</a></li>
+            </ul>
+          </div>
+
+          <!-- Locations -->
+          <div class="col-lg-3 col-md-12 footer-links">
+            <h4>مواقعنا</h4>
+            <ul>
+              <li><i class="bi bi-geo-alt"></i> القاهرة الجديدة – التجمع الخامس</li>
+              <li><i class="bi bi-geo-alt"></i> شرق القاهرة – مدينة المستقبل</li>
+              <li><i class="bi bi-geo-alt"></i> هليوبوليس الجديدة</li>
+              <li><i class="bi bi-geo-alt"></i> الشيخ زايد – غرب القاهرة</li>
+              <li><i class="bi bi-geo-alt"></i> الساحل الشمالي – رأس الحكمة</li>
+              <li><i class="bi bi-geo-alt"></i> الساحل الشمالي – سيدي عبدالرحمن</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-mark">
+      <div class="container">
+        <div class="footer-mark-row">
+          <span class="footer-mark-rule"></span>
+          <span class="footer-logo-tile">
+            <img src="assets/img/logo.webp" alt="SODIC × URE Logo" loading="lazy">
+          </span>
+          <span class="footer-mark-rule"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright text-center mt-4">
+      <p style="font-size: 8px;">
+        URE is an independent real estate consultancy and authorized brokerage firm.
+        We are not the primary developer of the projects listed on this website.
+        All logos and brand names are the property of their respective owners (SODIC)
+        and are used here for marketing purposes under our official partnership agreement.
+        Visit our official website: <a href="https://ureeg.com/ar/" style="color:#fa7f28;">ureeg.com</a>
+      </p>
+    </div>
+
+    <!-- URE Bottom Disclaimer Bar -->
+    <div class="ure-bottom-bar" dir="rtl" style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 20px; padding: 18px 0;">
+      <div class="container">
+
+        <!-- Top row: copyright + links -->
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; padding-bottom: 14px;">
+          <div style="font-size: 12px; color: #fff; opacity: 0.85;">
+            &copy; 2026 URE. جميع الحقوق محفوظة.
+          </div>
+          <nav style="display: flex; gap: 20px; flex-wrap: wrap; font-size: 12px;">
+            <a href="privacy-policy.html" style="color: #fff; opacity: 0.85; text-decoration: none;">سياسة الخصوصية</a>
+            <a href="terms-and-conditions.html" style="color: #fff; opacity: 0.85; text-decoration: none;">شروط الاستخدام</a>
+            <a href="privacy-policy.html" style="color: #fff; opacity: 0.85; text-decoration: none;">سياسة الكوكيز</a>
+            <a href="#hero" style="color: #fff; opacity: 0.85; text-decoration: none;">خريطة الموقع</a>
+          </nav>
+        </div>
+
+        <!-- Bottom row: disclaimer + license -->
+        <div style="display: flex; align-items: flex-start; gap: 12px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+          <span style="font-size: 18px; color: #fa7f28; flex-shrink: 0; margin-top: 2px;">
+            <i class="bi bi-headset"></i>
+          </span>
+          <p style="font-size: 11px; color: #fff; opacity: 0.8; line-height: 1.7; margin: 0;">
+            <strong style="color: #fa7f28;">إخلاء مسؤولية:</strong>
+            جميع المعلومات والأسعار المعروضة على هذا الموقع مقدمة لأغراض المعلومات فقط،
+            وقد تتغير دون إشعار مسبق. يوريج ليست مسؤولة عن دقة محتوى أي إعلان أو توفر العقار فعليًا.
+            توصينا بالتحقق من جميع المعلومات قبل إتمام أي صفقة عقارية.
+            يوريج هي منصة عقارية مرخصة في جمهورية مصر العربية.
+            <span style="display: inline-block; margin: 0 6px; color: #fa7f28;"><i class="bi bi-patch-check-fill"></i></span>
+            مرخصة من الهيئة العامة للرقابة المالية
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <div class="modal modal-lg fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog-centered modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <div class="col-lg-20">
+
+            <form onsubmit="handleSubmit(event, currentProject)" class="custom-register-form" data-aos="fade-up"
+              data-aos-delay="200">
+
+
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="font-weight: bold; margin: 0 auto;">سجّل الآن</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                  style="margin-right: 10px;"></button>
+              </div>
+
+              <p style="text-align: center;">
+                اكتشف مشروعات SODIC في أفضل المواقع داخل مصر واحجز وحدتك الآن.
+              </p>
+
+
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder=" الاسم الكامل" dir="rtl" required>
+                </div>
+
+                <div class="col-md-6">
+                  <input type="tel" name="phone" class="form-control" placeholder=" رقم الهاتف" dir="rtl" required>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn-register">
+                    <i class="bi bi-person-check"></i> سجّل الآن
+                  </button>
+                </div>
+
+                <div class="col-md-12">
+                  <p style="font-size: 10px; text-align: center; color: #666; margin-top: 15px; line-height: 1.5;">
+                    URE is an independent real estate consultancy and authorized brokerage firm.
+                    We are not the primary developer of the projects listed on this website.
+                    All logos and brand names are the property of their respective owners (SODIC)
+                    and are used here for marketing purposes under our official partnership agreement.
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader" class="d-none"></div>
+
+  <script>
+    let currentProject = 'Sodic All In House';
+    function setProject(projectName) {
+      currentProject = projectName;
+    }
+
+    // Mobile nav toggle
+    const _toggle = document.getElementById('ureMobileToggle');
+    const _menu   = document.getElementById('ureMobileMenu');
+    if (_toggle && _menu) {
+      _toggle.addEventListener('click', function () {
+        _toggle.classList.toggle('open');
+        _menu.classList.toggle('open');
+      });
+    }
+
+    function setProject(projectName) {
+      currentProject = projectName;
+    }
+  </script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <!-- Main JS File -->
+  <script src="./main.js"></script>
+  <script>
+    const lightbox = GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true });
+  </script>
+
+</body>
+
+</html>
