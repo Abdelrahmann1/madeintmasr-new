@@ -43,27 +43,36 @@
 
   <header id="header" class="header d-flex align-items-center fixed-top">
 
-      <!-- Logo — left -->
-      <a href="index.html" class="logo d-flex align-items-center ure-logo-side">
-        <img src="assets/img/logo.webp" alt="URE Logo">
-      </a>
+    <div class="container-fluid container-xl header-inner" dir="rtl">
 
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <!-- Desktop nav links — true center -->
-      <nav class="ure-navmenu d-none d-lg-flex align-items-center gap-3" dir="rtl">
-        <a href="#projects">مشروعاتنا</a>
-      </nav>
-
-      <!-- CTA — desktop only -->
-      <div class="ure-logo-side d-none d-lg-flex justify-content-end align-items-center">
-        <a class="btn-getstarted" data-bs-toggle="modal" data-bs-target="#staticBackdrop">سجّل الآن</a>
+      <!-- Right side (RTL start): WhatsApp CTA -->
+      <div class="header-side header-side-start">
+        <a class="btn-getstarted btn-whatsapp" href="https://wa.me/201552454773" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+          <i class="bi bi-whatsapp" aria-hidden="true"></i>
+          <span class="btn-label">استفسر الآن</span>
+        </a>
       </div>
 
-      <!-- Hamburger — mobile only -->
-      <button class="ure-mobile-toggle d-lg-none" id="ureMobileToggle" aria-label="القائمة">
-        <span></span><span></span><span></span>
-      </button>
+      <!-- Center: Desktop nav links -->
+      <nav class="ure-navmenu d-none d-lg-flex align-items-center">
+        <a href="#hero" class="active">الرئيسية</a>
+        <a href="#projects">مشاريعنا</a>
+        <a href="#about">من نحن</a>
+        <a href="#why">لماذا نحن</a>
+        <a href="#contact-cta">تواصل معنا</a>
+      </nav>
+
+      <!-- Center: Mobile-only logo -->
+      <a href="#hero" class="header-mobile-logo d-lg-none" aria-label="مدينة مصر">
+        <img src="assets/img/logo.webp" alt="مدينة مصر">
+      </a>
+
+      <!-- Left side (RTL end): Hamburger on mobile -->
+      <div class="header-side header-side-end">
+        <button class="ure-mobile-toggle d-lg-none" id="ureMobileToggle" aria-label="القائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
 
     </div>
 
@@ -75,14 +84,17 @@
 
       <!-- Nav links -->
       <nav class="ure-drawer-nav">
-        <a href="#projects"
-          onclick="document.getElementById('ureMobileMenu').classList.remove('open');document.getElementById('ureMobileToggle').classList.remove('open');">مشروعاتنا</a>
+        <a href="#hero" onclick="document.getElementById('ureMobileMenu').classList.remove('open');document.getElementById('ureMobileToggle').classList.remove('open');">الرئيسية</a>
+        <a href="#projects" onclick="document.getElementById('ureMobileMenu').classList.remove('open');document.getElementById('ureMobileToggle').classList.remove('open');">مشاريعنا</a>
+        <a href="#about" onclick="document.getElementById('ureMobileMenu').classList.remove('open');document.getElementById('ureMobileToggle').classList.remove('open');">من نحن</a>
+        <a href="#why" onclick="document.getElementById('ureMobileMenu').classList.remove('open');document.getElementById('ureMobileToggle').classList.remove('open');">لماذا نحن</a>
+        <a href="#contact-cta" onclick="document.getElementById('ureMobileMenu').classList.remove('open');document.getElementById('ureMobileToggle').classList.remove('open');">تواصل معنا</a>
       </nav>
 
-      <!-- Sign-in CTA -->
-      <a class="ure-mobile-cta" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+      <!-- WhatsApp CTA -->
+      <a class="ure-mobile-cta" href="https://wa.me/201000000000" target="_blank" rel="noopener" style="background:#25d366 !important;"
         onclick="document.getElementById('ureMobileMenu').classList.remove('open');document.getElementById('ureMobileToggle').classList.remove('open');">
-        سجّل الآن
+        <i class="bi bi-whatsapp"></i> استفسر الآن
       </a>
 
       <!-- Bottom: brand text + disclaimer -->
@@ -106,196 +118,281 @@
 
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section hero-solid">
-
+    <section id="hero" class="hero section hero-split-v2" dir="rtl">
       <div class="container">
+        <div class="row hero-grid gy-5 align-items-center">
 
-        <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-xl-8 col-lg-10">
-            <h2>ابدأ رحلتك نحو الغد</h2>
-            <h2>في مدينة مصر</h2>
+          <!-- Column 1: Title + Subtitle (right in RTL) -->
+          <div class="col-md-6 hero-text-col order-md-1">
+            <h1 class="hero-headline">
+              مستقبل السكن الراقي
+              <br>
+              يبدأ <span class="hl">من هنا</span>
+            </h1>
 
-            <p>
-              بخبرة تمتد لأكثر من عشرين عامًا من النجاح والتميّز،
-              مدينة مصر تمزج بين الفخامة والراحة في أرقى المواقع الاستراتيجية.
+            <p class="hero-sub">
+              مع أكثر من عقدين من الخبرة والتميز، نقدم لك مشاريع عقارية استثنائية
+              تجمع بين الفخامة والراحة في أرقى المواقع الاستراتيجية.
             </p>
-            <br>
           </div>
 
-          <br>
-          <div class="hero-cta-group" style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-            <a href="#projects" class="btn-register-out-side">
-              <i class="bi bi-buildings"></i> مشروعات مدينة مصر
-            </a>
-            <a href="#gallery" class="btn-register-out-side btn-secondary-cta">
-              <i class="bi bi-images"></i> شاهد معرض الصور
-            </a>
+          <!-- Column 2: Image (left in RTL) -->
+          <div class="col-md-6 hero-img-col order-md-2">
+            <div class="hero-img-tilt">
+              <img src="assets/img/hero.jpg" alt="مدينة مصر للإسكان والتعمير" loading="eager">
+            </div>
           </div>
 
-          <!-- Scroll-to-gallery indicator -->
-          <a href="#about" class="hero-scroll-cue" aria-label="تعرّف علينا">
-            <span class="scroll-cue-label">تعرّف علينا</span>
-            <span class="scroll-cue-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 4v16"/>
-                <path d="M5 13l7 7 7-7"/>
-              </svg>
-            </span>
+        </div>
+
+        <!-- Centered CTA row beneath both columns -->
+        <div class="hero-cta-row hero-cta-centered">
+          <a href="#projects" class="btn-hero-primary">
+            <i class="bi bi-search"></i> اكتشف مشاريعنا
+          </a>
+          <a href="#about" class="btn-hero-secondary">
+            <i class="bi bi-info-circle"></i> تعرّف علينا
           </a>
         </div>
 
+        <!-- Scroll cue -->
+        <a href="#about" class="hero-scroll-cue-v2" aria-label="اكتشف المزيد">
+          <span>اكتشف المزيد</span>
+          <span class="cue-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14"/>
+              <path d="M6 13l6 6 6-6"/>
+            </svg>
+          </span>
+        </a>
       </div>
-
     </section><!-- /Hero Section -->
 
-    <!-- Gallery Section (under hero) -->
-    <section id="gallery" class="ure-gallery-section" dir="rtl">
-      <div class="container">
-
-        <div class="ure-gallery-header" data-aos="fade-up">
-          <h2 class="ure-gallery-title">معرض الصور</h2>
-          <div class="ure-gallery-line"></div>
-        </div>
-
-        <!-- Auto-cycling gallery slider -->
-        <div id="galleryCarousel" class="carousel slide ure-gallery-carousel" data-bs-ride="carousel"
-          data-bs-interval="3500" data-aos="fade-up" data-aos-delay="100" dir="ltr">
-
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
-            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
-          </div>
-
-          <div class="carousel-inner">
-
-            <div class="carousel-item active">
-              <img src="assets/img/east/1.webp" class="d-block w-100" alt="كمبوند سراي - مدينة مصر">
-              <div class="carousel-caption"><span>كمبوند سراي</span></div>
-            </div>
-
-            <div class="carousel-item">
-              <img src="assets/img/new/1.png" class="d-block w-100" alt="كمبوند تاج سيتي - مدينة مصر">
-              <div class="carousel-caption"><span>كمبوند تاج سيتي</span></div>
-            </div>
-
-            <div class="carousel-item">
-              <img src="assets/img/newlunch/1.jpg" class="d-block w-100" alt="The Butterfly - مدينة مصر">
-              <div class="carousel-caption"><span>The Butterfly</span></div>
-            </div>
-
-            <div class="carousel-item">
-              <img src="assets/img/ogami/1.webp" class="d-block w-100" alt="TALALA - مدينة مصر">
-              <div class="carousel-caption"><span>TALALA</span></div>
-            </div>
-
-            <div class="carousel-item">
-              <img src="assets/img/east/2.webp" class="d-block w-100" alt="مشروعات مدينة مصر">
-              <div class="carousel-caption"><span>سراي - التجمع الخامس</span></div>
-            </div>
-
-            <div class="carousel-item">
-              <img src="assets/img/new/2.png" class="d-block w-100" alt="مدينة مصر للإسكان والتعمير">
-              <div class="carousel-caption"><span>تاج سيتي - القاهرة الجديدة</span></div>
-            </div>
-
-            <div class="carousel-item">
-              <img src="assets/img/newlunch/2.jpg" class="d-block w-100" alt="The Butterfly - شرق القاهرة">
-              <div class="carousel-caption"><span>The Butterfly - شرق القاهرة</span></div>
-            </div>
-
-            <div class="carousel-item">
-              <img src="assets/img/ogami/2.jpg" class="d-block w-100" alt="TALALA - الساحل الشمالي">
-              <div class="carousel-caption"><span>TALALA - رأس الحكمة</span></div>
-            </div>
-
-          </div>
-
-          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-
-        </div>
-      </div>
-    </section>
-    <!-- /Gallery Section -->
 
     <!-- About Us Section -->
-    <section id="about" class="about-section" dir="rtl">
+    <section id="about" class="about-section about-v2" dir="rtl">
       <div class="container">
-        <div class="row align-items-center gy-5">
-          <div class="col-lg-5" data-aos="fade-right">
-            <div class="about-image-wrap">
-              <img src="assets/img/east/2.webp" alt="مدينة مصر للإسكان والتعمير" loading="lazy">
-              <div class="about-stat">
-                <span class="about-stat-num">+20</span>
-                <span class="about-stat-label">عامًا من الخبرة</span>
+
+        <!-- Centered header -->
+        <div class="about-header text-center" data-aos="fade-up">
+          <span class="about-eyebrow-pill">من نحن</span>
+          <h2 class="about-main-title">رواد التطوير العقاري في مصر</h2>
+          <p class="about-main-sub">
+            نحن لا نبني مجرد مشاريع سكنية، بل نصمم أسلوب حياة متكامل
+            يلبي تطلعات عملائنا ويحقق أحلامهم.
+          </p>
+        </div>
+
+        <div class="row about-grid g-4 align-items-start">
+
+          <!-- Right column (text content) -->
+          <div class="col-lg-7 order-lg-2" data-aos="fade-left">
+            <h3 class="about-story-title">قصة نجاح تمتد لأكثر من عقدين</h3>
+
+            <p>
+              شركة <strong>مدينة مصر للإسكان والتعمير</strong> الرائدة في قطاع
+              التطوير العقاري المصري، تتميز بخبرة واسعة وسجل حافل من الإنجازات المتميزة.
+              منذ انطلاقتها، والشركة تضع بصمتها في السوق العقاري من خلال مشاريع نوعية
+              تجمع بين الجودة العالية والتصميم المعاصر.
+            </p>
+
+            <p>
+              في عام <strong>2023</strong>، شهدت الشركة تطورًا استراتيجيًا هامًا
+              بتغيير اسمها من <strong>"مدينة نصر للإسكان والتعمير"</strong>
+              إلى <strong>"مدينة مصر للإسكان والتعمير"</strong>،
+              وذلك كجزء من رؤية طموحة لتوسيع نطاق أعمالها وتطوير علامتها التجارية
+              لتشمل جميع أنحاء الجمهورية.
+            </p>
+
+            <div class="about-quality-badge">
+              <span class="badge-icon"><i class="bi bi-patch-check-fill"></i></span>
+              <div class="badge-text">
+                <strong>التميز والجودة</strong>
+                <span>نلتزم بأعلى معايير الجودة في كل مشروع نقوم بتطويره</span>
               </div>
             </div>
           </div>
-          <div class="col-lg-7" data-aos="fade-left">
-            <span class="section-eyebrow">من نحن</span>
-            <h2 class="section-h2">مدينة مصر للإسكان والتعمير</h2>
-            <p>
-              تُعد شركة <strong>مدينة مصر للإسكان والتعمير</strong> واحدة من أبرز الأسماء في سوق التطوير العقاري المصري،
-              حيث استطاعت على مدار سنوات طويلة أن ترسّخ مكانتها من خلال سجل حافل بالمشروعات المتميزة
-              التي تجمع بين الجودة، الابتكار، والرؤية العصرية في التصميم والتخطيط.
-            </p>
-            <p>
-              ومنذ تأسيسها، حرصت الشركة على تقديم مجتمعات عمرانية متكاملة تلبي تطلعات العملاء
-              وتواكب تطور السوق العقاري في مصر.
-            </p>
-            <p>
-              وفي إطار خطتها التوسعية ورؤيتها المستقبلية الطموحة، أعلنت الشركة خلال عام 2023
-              عن تغيير اسمها من <strong>مدينة نصر للإسكان والتعمير</strong> إلى
-              <strong>مدينة مصر للإسكان والتعمير</strong>،
-              في خطوة استراتيجية تعكس توسع نطاق أعمالها وتعزز هويتها الجديدة
-              بما يتماشى مع انتشار مشروعاتها في مختلف أنحاء الجمهورية.
-            </p>
+
+          <!-- Left column (feature cards) -->
+          <div class="col-lg-5 order-lg-1" data-aos="fade-right">
+            <div class="about-feature-card">
+              <div class="card-content">
+                <h4>مشاريع متنوعة</h4>
+                <p>من الشقق العصرية إلى الفيلات الفاخرة</p>
+              </div>
+              <span class="card-icon"><i class="bi bi-buildings"></i></span>
+            </div>
+
+            <div class="about-feature-card">
+              <div class="card-content">
+                <h4>مواقع استراتيجية</h4>
+                <p>في أرقى أحياء القاهرة الجديدة</p>
+              </div>
+              <span class="card-icon"><i class="bi bi-geo-alt-fill"></i></span>
+            </div>
+
+            <div class="about-feature-card">
+              <div class="card-content">
+                <h4>فريق متخصص</h4>
+                <p>من أفضل الخبراء والمهندسين</p>
+              </div>
+              <span class="card-icon"><i class="bi bi-people-fill"></i></span>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
     <!-- /About Us Section -->
 
-    <!-- Madinet Masr Mini Locations -->
-    <section class="lavista-mini-locations" dir="rtl" id="projects">
+    <!-- Projects Showcase Grid -->
+    <section id="projects" class="projects-showcase" dir="rtl">
       <div class="container">
-        <div class="row align-items-center gy-3">
 
-          <!-- Text -->
-          <div class="col-lg-4 col-md-12">
-            <h4 style="text-align: center; font-size: 29px;">مدينة مصر</h4>
-            <p style="text-align: center;">مشروعاتنا في أرقى المواقع داخل مصر</p>
-          </div>
+        <!-- Centered header -->
+        <div class="projects-showcase-header text-center" data-aos="fade-up">
+          <span class="eyebrow-pill">مشاريعنا</span>
+          <h2>استكشف مجموعة مشاريعنا المتميزة</h2>
+          <p>كل مشروع يحكي قصة فريدة من التميز والإبداع، مصمم خصيصًا ليلبي احتياجاتك وتطلعاتك.</p>
+        </div>
 
-          <!-- Locations -->
-          <div class="col-lg-8 col-md-12">
-            <div class="locations-list">
-              <a href="#sarai" class="location-new">
-                كمبوند سراي <small>طرح جديد</small>
-              </a>
-              <a href="#tajcity" class="location-new">
-                كمبوند تاج سيتي <small>طرح جديد</small>
-              </a>
-              <a href="#butterfly" class="location-new">
-                The Butterfly <small>طرح جديد</small>
-              </a>
-              <a href="#talala" class="location-new">
-                TALALA <small>طرح جديد</small>
-              </a>
+        <div class="projects-showcase-grid">
+
+          <!-- Sarai -->
+          <article class="project-show-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="img-wrap">
+              <img src="assets/img/sarai.jpg" alt="كمبوند سراي - مدينة مصر" loading="lazy">
+              <span class="new-badge">لونش جديد</span>
+              <div class="meta-top">
+                <span class="meta-pill"><i class="bi bi-geo-alt-fill"></i> القاهرة الجديدة</span>
+                <span class="meta-pill"><i class="bi bi-bounding-box"></i> +500 فدان</span>
+              </div>
+              <div class="img-overlay">
+                <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="explore-btn"><i class="bi bi-eye"></i> استكشف المشروع</a>
+              </div>
             </div>
-          </div>
+            <div class="body">
+              <h3>كمبوند Sarai</h3>
+              <p class="desc">
+                يقع كمبوند سراي بالقاهرة الجديدة على امتداد التجمع الخامس،
+                ويوفر مجتمعًا سكنيًا متكاملًا بمساحات خضراء وبحيرات صناعية.
+              </p>
+              <div class="tags">
+                <span class="tag"><i class="bi bi-house-door-fill"></i> وحدات متنوعة</span>
+                <span class="tag"><i class="bi bi-credit-card-2-front-fill"></i> أنظمة سداد مرنة</span>
+              </div>
+              <div class="actions">
+                <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="btn-whatsapp-card">
+                  <i class="bi bi-whatsapp"></i> استفسر
+                </a>
+                <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="btn-details">
+                  <i class="bi bi-info-circle"></i> التفاصيل
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Taj City -->
+          <article class="project-show-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="img-wrap">
+              <img src="assets/img/tajcity.jpg" alt="كمبوند تاج سيتي - مدينة مصر" loading="lazy">
+              <span class="new-badge">لونش جديد</span>
+              <div class="meta-top">
+                <span class="meta-pill"><i class="bi bi-geo-alt-fill"></i> القاهرة الجديدة</span>
+                <span class="meta-pill"><i class="bi bi-bounding-box"></i> +900 فدان</span>
+              </div>
+              <div class="img-overlay">
+                <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="explore-btn"><i class="bi bi-eye"></i> استكشف المشروع</a>
+              </div>
+            </div>
+            <div class="body">
+              <h3>كمبوند Taj City</h3>
+              <p class="desc">
+                مجمع سكني متكامل على مساحة شاسعة أمام مطار القاهرة الدولي،
+                يجمع بين الفخامة الكلاسيكية والمرافق العصرية.
+              </p>
+              <div class="tags">
+                <span class="tag"><i class="bi bi-house-door-fill"></i> وحدات متنوعة</span>
+                <span class="tag"><i class="bi bi-credit-card-2-front-fill"></i> أنظمة سداد مرنة</span>
+              </div>
+              <div class="actions">
+                <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="btn-whatsapp-card">
+                  <i class="bi bi-whatsapp"></i> استفسر
+                </a>
+                <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="btn-details">
+                  <i class="bi bi-info-circle"></i> التفاصيل
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- The Butterfly -->
+          <article class="project-show-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="img-wrap">
+              <img src="assets/img/butterfly.jpg" alt="The Butterfly - مدينة مصر" loading="lazy">
+              <span class="new-badge">لونش جديد</span>
+              <div class="meta-top">
+                <span class="meta-pill"><i class="bi bi-geo-alt-fill"></i> شرق القاهرة</span>
+                <span class="meta-pill"><i class="bi bi-stars"></i> طرح أول</span>
+              </div>
+              <div class="img-overlay">
+                <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="explore-btn"><i class="bi bi-eye"></i> استكشف المشروع</a>
+              </div>
+            </div>
+            <div class="body">
+              <h3>كمبوند The Butterfly</h3>
+              <p class="desc">
+                يقع كمبوند ذا بترفلاي أمام محور الأمل بجوار كمبوند سراي،
+                وبالقرب من العاصمة الإدارية الجديدة بتصميم عصري مميز.
+              </p>
+              <div class="tags">
+                <span class="tag"><i class="bi bi-house-door-fill"></i> وحدات متنوعة</span>
+                <span class="tag"><i class="bi bi-credit-card-2-front-fill"></i> أنظمة سداد مرنة</span>
+              </div>
+              <div class="actions">
+                <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="btn-whatsapp-card">
+                  <i class="bi bi-whatsapp"></i> استفسر
+                </a>
+                <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="btn-details">
+                  <i class="bi bi-info-circle"></i> التفاصيل
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- TALALA -->
+          <article class="project-show-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="img-wrap">
+              <img src="assets/img/talala.webp" alt="TALALA - مدينة مصر" loading="lazy">
+              <span class="new-badge">لونش جديد</span>
+              <div class="meta-top">
+                <span class="meta-pill"><i class="bi bi-geo-alt-fill"></i> رأس الحكمة</span>
+                <span class="meta-pill"><i class="bi bi-water"></i> ساحلي فاخر</span>
+              </div>
+              <div class="img-overlay">
+                <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="explore-btn"><i class="bi bi-eye"></i> استكشف المشروع</a>
+              </div>
+            </div>
+            <div class="body">
+              <h3>منتجع TALALA</h3>
+              <p class="desc">
+                منتجع ساحلي راقٍ في قلب رأس الحكمة بإطلالة ساحرة على البحر الأبيض المتوسط،
+                يجمع بين الفخامة والطبيعة لتجربة مصيف استثنائية.
+              </p>
+              <div class="tags">
+                <span class="tag"><i class="bi bi-house-door-fill"></i> شاليهات وفلل</span>
+                <span class="tag"><i class="bi bi-credit-card-2-front-fill"></i> أنظمة سداد مرنة</span>
+              </div>
+              <div class="actions">
+                <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="btn-whatsapp-card">
+                  <i class="bi bi-whatsapp"></i> استفسر
+                </a>
+                <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="btn-details">
+                  <i class="bi bi-info-circle"></i> التفاصيل
+                </a>
+              </div>
+            </div>
+          </article>
 
         </div>
       </div>
@@ -303,208 +400,98 @@
 
 
 
-    <!-- Sarai Highlight Section -->
-    <section id="sarai" class="new-launch-section" dir="rtl">
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-v2" dir="rtl">
       <div class="container">
 
-        <div class="row align-items-center">
-
-          <!-- Content -->
-          <div class="col-lg-6 margin-mob-5" data-aos="fade-right">
-            <span class="launch-tag">طرح جديد</span>
-
-            <h2>كمبوند سراي</h2>
-            <h4>القاهرة الجديدة – امتداد التجمع الخامس</h4>
-
-            <p class="launch-desc">
-              <strong>سراي</strong> من <strong>مدينة مصر</strong> مجتمع سكني متكامل
-              يقع في موقع استراتيجي بالقاهرة الجديدة، يجمع بين الفخامة والهدوء
-              ويوفر أسلوب حياة عصري وسط مساحات خضراء واسعة وبحيرات صناعية ومرافق متكاملة.
-            </p>
-
-            <ul class="launch-features">
-              <li>موقع متميز قريب من الطريق الدائري الأوسطي</li>
-              <li>مساحات خضراء وبحيرات صناعية</li>
-              <li>وحدات متنوعة: شقق، تاون هاوس، توين هاوس، فلل</li>
-              <li>كلوب هاوس ومرافق رياضية متكاملة</li>
-              <li>منطقة تجارية وخدمية</li>
-              <li>أمن وحراسة على مدار 24/7</li>
-            </ul>
-
-            <div class="launch-units">
-              <p><strong>نظام السداد:</strong></p>
-              <p>أنظمة سداد مرنة تصل حتى 8 سنوات — احجز اهتمامك للحصول على أفضل الوحدات</p>
-            </div>
-
-            <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-              onclick="setProject('Sarai - Madinet Masr')">
-              سجّل بياناتك الآن
-            </a>
-          </div>
-
-          <!-- Image -->
-          <div class="col-lg-6" data-aos="fade-left">
-            <div class="launch-image">
-              <img src="assets/img/east/2.webp" alt="كمبوند سراي - مدينة مصر" loading="lazy">
-            </div>
-          </div>
-
+        <div class="gallery-header text-center" data-aos="fade-up">
+          <span class="eyebrow-pill">معرض الصور</span>
+          <h2>شاهد روعة مشاريعنا</h2>
+          <p>جولة بصرية في أرقى مشاريعنا العقارية المتميزة.</p>
         </div>
-      </div>
-    </section>
 
-    <!-- Taj City Highlight Section -->
-    <section id="tajcity" class="new-launch-section" dir="rtl">
-      <div class="container">
+        <div class="gallery-grid">
 
-        <div class="row align-items-center">
-
-          <!-- Content -->
-          <div class="col-lg-6 margin-mob-5" data-aos="fade-right">
-            <span class="launch-tag">طرح جديد</span>
-
-            <h2>كمبوند تاج سيتي</h2>
-            <h4>القاهرة الجديدة – أمام مطار القاهرة الدولي</h4>
-
-            <p class="launch-desc">
-              <strong>تاج سيتي</strong> من <strong>مدينة مصر</strong> يُعد من أكبر
-              المجتمعات السكنية في شرق القاهرة على مساحة تتجاوز <strong>900 فدان</strong>،
-              بموقع فريد أمام مطار القاهرة الدولي ومدخل التجمع الخامس،
-              يقدم أسلوب حياة متكامل بتصميمات معمارية مستوحاة من الفخامة الكلاسيكية.
-            </p>
-
-            <ul class="launch-features">
-              <li>أكثر من 900 فدان من المجتمع المتكامل</li>
-              <li>موقع استثنائي أمام مطار القاهرة الدولي</li>
-              <li>تنوع كبير في الوحدات والمساحات</li>
-              <li>بحيرات وحدائق ومسارات للمشي والدراجات</li>
-              <li>مدارس ومراكز طبية ومناطق تجارية</li>
-              <li>كلوب هاوس ومرافق ترفيهية ورياضية</li>
-              <li>أمن وحراسة 24/7</li>
-            </ul>
-
-            <div class="launch-units">
-              <p><strong>الوحدات المتاحة:</strong></p>
-              <p>شقق – دوبلكس – تاون هاوس – توين هاوس – فلل مستقلة</p>
-              <p><strong>نظام السداد:</strong></p>
-              <p>خطط سداد مرنة تنافسية — للتفاصيل سجّل بياناتك الآن</p>
-            </div>
-
-            <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-              onclick="setProject('Taj City - Madinet Masr')">
-              سجّل بياناتك الآن
-            </a>
-          </div>
-
-          <!-- Image -->
-          <div class="col-lg-6" data-aos="fade-left">
-            <div class="launch-image">
-              <img src="assets/img/new/2.png" alt="كمبوند تاج سيتي - مدينة مصر" loading="lazy">
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="0">
+            <img src="assets/img/sarai.jpg" alt="كمبوند سراي" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
           </div>
 
-        </div>
-      </div>
-    </section>
 
-
-    <!-- The Butterfly Highlight Section -->
-    <section id="butterfly" class="new-launch-section" dir="rtl">
-      <div class="container">
-
-        <div class="row align-items-center">
-
-          <!-- Content -->
-          <div class="col-lg-6 margin-mob-5" data-aos="fade-right">
-            <span class="launch-tag">طرح جديد</span>
-
-            <h2>The Butterfly</h2>
-            <h4>شرق القاهرة – امتداد تاج سيتي</h4>
-
-            <p class="launch-desc">
-              <strong>The Butterfly</strong> أحدث مشروعات <strong>مدينة مصر</strong>
-              في شرق القاهرة، يقدم رؤية معمارية مبتكرة بتصميمات عصرية مستوحاة من الطبيعة،
-              وسط مساحات خضراء واسعة ومرافق متكاملة لتجربة سكنية فريدة.
-            </p>
-
-            <ul class="launch-features">
-              <li>تصميم معماري عصري ومميز</li>
-              <li>موقع استراتيجي في شرق القاهرة</li>
-              <li>وحدات بمساحات وتصميمات متنوعة</li>
-              <li>مساحات خضراء واسعة ومناطق ترفيهية</li>
-              <li>مرافق خدمية وتجارية متكاملة</li>
-              <li>أنظمة أمن وحراسة متطورة</li>
-            </ul>
-
-            <div class="launch-units">
-              <p><strong>الإطلاق:</strong></p>
-              <p>طرح جديد — احجز اهتمامك مبكرًا للحصول على أفضل الوحدات وأنظمة سداد تنافسية</p>
-            </div>
-
-            <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-              onclick="setProject('The Butterfly - Madinet Masr')">
-              سجّل بياناتك الآن
-            </a>
-          </div>
-
-          <!-- Image -->
-          <div class="col-lg-6" data-aos="fade-left">
-            <div class="launch-image">
-              <img src="assets/img/newlunch/1.jpg" alt="The Butterfly - مدينة مصر" loading="lazy">
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="60">
+            <img src="assets/img/east/1.webp" alt="مشروعات مدينة مصر" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
           </div>
 
-        </div>
-      </div>
-    </section>
 
-
-    <!-- TALALA Highlight Section -->
-    <section id="talala" class="new-launch-section" dir="rtl">
-      <div class="container">
-
-        <div class="row align-items-center">
-
-          <!-- Content -->
-          <div class="col-lg-6 margin-mob-5" data-aos="fade-right">
-            <span class="launch-tag">طرح جديد</span>
-
-            <h2>TALALA</h2>
-            <h4>الساحل الشمالي – رأس الحكمة</h4>
-
-            <p class="launch-desc">
-              <strong>TALALA</strong> هو الوجه الجديد لمصاييف <strong>مدينة مصر</strong>،
-              منتجع ساحلي راقٍ في قلب رأس الحكمة بإطلالة ساحرة على البحر الأبيض المتوسط،
-              يجمع بين الفخامة والطبيعة لتجربة عطلات استثنائية بعيدًا عن صخب المدينة.
-            </p>
-
-            <ul class="launch-features">
-              <li>إطلالة مباشرة على البحر الأبيض المتوسط</li>
-              <li>موقع متميز في رأس الحكمة</li>
-              <li>تصميمات معمارية عصرية وفاخرة</li>
-              <li>شاطئ خاص ولاجونات كريستالية</li>
-              <li>مطاعم وكافيهات ومرافق ترفيهية</li>
-              <li>وحدات متنوعة: شاليهات، تاون هاوس، فيلات</li>
-              <li>أنظمة أمن وحراسة 24/7</li>
-            </ul>
-
-            <div class="launch-units">
-              <p><strong>الإطلاق:</strong></p>
-              <p>طرح جديد — أسعار تنافسية وأنظمة سداد مرنة للمشترين الأوائل</p>
-            </div>
-
-            <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-              onclick="setProject('TALALA - Madinet Masr')">
-              سجّل بياناتك الآن
-            </a>
-          </div>
-
-          <!-- Image -->
-          <div class="col-lg-6" data-aos="fade-left">
-            <div class="launch-image">
-              <img src="assets/img/ogami/1.webp" alt="TALALA - مدينة مصر" loading="lazy">
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="120">
+            <img src="assets/img/east/2.webp" alt="مدينة مصر" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
           </div>
+
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="0">
+            <img src="assets/img/butterfly.jpg" alt="The Butterfly" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </div>
+
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="60">
+            <img src="assets/img/tajcity.jpg" alt="كمبوند تاج سيتي" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </div>
+
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="120">
+            <img src="assets/img/talala.webp" alt="منتجع TALALA" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </div>
+
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="0">
+            <img src="assets/img/new/1.png" alt="مشروعات سكنية" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </div>
+
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="60">
+            <img src="assets/img/new/2.png" alt="مجتمعات متكاملة" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </div>
+
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="120">
+            <img src="assets/img/ogami/1.webp" alt="مدينة مصر للإسكان والتعمير" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </div>
+
 
         </div>
       </div>
@@ -512,49 +499,46 @@
 
 
     <!-- Why Madinet Masr Section -->
-    <section id="why" class="why-section" dir="rtl">
+    <section id="why" class="why-section why-v2" dir="rtl">
       <div class="container">
 
-        <div class="section-title text-center mb-5" data-aos="fade-up">
-          <h2>لماذا مدينة مصر؟</h2>
-          <p>أسباب تجعل مدينة مصر الخيار الأمثل لاستثمارك العقاري</p>
-        </div>
+        <h2 class="why-main-title text-center" data-aos="fade-up">ما يميزنا عن الآخرين</h2>
 
         <div class="why-grid">
           <div class="why-card" data-aos="fade-up" data-aos-delay="0">
-            <span class="why-icon"><i class="bi bi-award"></i></span>
-            <h3>أكثر من 20 عامًا من الخبرة</h3>
-            <p>سجل حافل بالمشروعات المتميزة وثقة عملاء على مدار سنوات في سوق التطوير العقاري المصري.</p>
+            <span class="why-icon"><i class="bi bi-calculator"></i></span>
+            <h3>أنظمة سداد مرنة</h3>
+            <p>نوفر خطط دفع متنوعة ومرنة تناسب جميع الإمكانيات المالية لعملائنا.</p>
           </div>
 
           <div class="why-card" data-aos="fade-up" data-aos-delay="80">
-            <span class="why-icon"><i class="bi bi-geo-alt"></i></span>
-            <h3>مواقع استراتيجية</h3>
-            <p>مشروعاتنا في أرقى المواقع داخل القاهرة الجديدة وشرق القاهرة والساحل الشمالي.</p>
+            <span class="why-icon"><i class="bi bi-clock"></i></span>
+            <h3>التسليم في الموعد</h3>
+            <p>التزامنا بالمواعيد المحددة والتسليم في الوقت المناسب هو أولوية قصوى لدينا.</p>
           </div>
 
           <div class="why-card" data-aos="fade-up" data-aos-delay="160">
-            <span class="why-icon"><i class="bi bi-buildings"></i></span>
-            <h3>مجتمعات متكاملة</h3>
-            <p>تخطيط عمراني متكامل يشمل وحدات سكنية وخدمات ومرافق ترفيهية وتجارية في مكان واحد.</p>
+            <span class="why-icon"><i class="bi bi-shield-check"></i></span>
+            <h3>ضمان الجودة</h3>
+            <p>نستخدم أفضل المواد وأحدث التقنيات في البناء مع ضمان شامل على جميع أعمالنا.</p>
           </div>
 
           <div class="why-card" data-aos="fade-up" data-aos-delay="0">
-            <span class="why-icon"><i class="bi bi-gem"></i></span>
-            <h3>جودة وفخامة</h3>
-            <p>أعلى معايير التصميم والتشطيب مع تنوع في الوحدات يلبي مختلف الأذواق والاحتياجات.</p>
+            <span class="why-icon"><i class="bi bi-key"></i></span>
+            <h3>تسليم مفتاح بيد</h3>
+            <p>وحدات جاهزة للسكن فورًا بتشطيبات عالية الجودة وتجهيزات كاملة.</p>
           </div>
 
           <div class="why-card" data-aos="fade-up" data-aos-delay="80">
-            <span class="why-icon"><i class="bi bi-shield-check"></i></span>
-            <h3>أمن وراحة</h3>
-            <p>أنظمة أمن وحراسة على مدار 24/7 وخدمات متكاملة لضمان أعلى مستويات الراحة.</p>
+            <span class="why-icon"><i class="bi bi-tree"></i></span>
+            <h3>التصميم المستدام</h3>
+            <p>نهتم بالبيئة ونطبق معايير البناء الأخضر في جميع مشاريعنا.</p>
           </div>
 
           <div class="why-card" data-aos="fade-up" data-aos-delay="160">
-            <span class="why-icon"><i class="bi bi-cash-coin"></i></span>
-            <h3>أنظمة سداد مرنة</h3>
-            <p>خطط دفع تنافسية تصل حتى 8 سنوات لتمنحك حرية امتلاك منزل أحلامك بسهولة.</p>
+            <span class="why-icon"><i class="bi bi-headset"></i></span>
+            <h3>خدمة عملاء متميزة</h3>
+            <p>فريق دعم متخصص متاح على مدار الساعة لخدمتك والإجابة على استفساراتك.</p>
           </div>
         </div>
 
@@ -569,8 +553,7 @@
         <p>احصل على استشارة مجانية واكتشف أفضل الفرص العقارية</p>
 
         <div class="cta-banner-actions">
-          <a href="#" class="btn-cta-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-            onclick="setProject('Madinet Masr - Free Consultation')">
+          <a href="#" class="btn-cta-primary">
             <i class="bi bi-chat-dots"></i> احصل على استشارة مجانية
           </a>
           <a href="tel:+201000000000" class="btn-cta-secondary">
@@ -624,8 +607,7 @@
                 </div>
 
                 <div class="btn-div">
-                  <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                    onclick="setProject('Sodic All In House')">
+                  <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="btn-register">
                     سجّل بياناتك الآن
                   </a>
                 </div>
@@ -666,8 +648,7 @@
                 </div>
 
                 <div class="btn-div">
-                  <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                    onclick="setProject('Sodic All In House')">
+                  <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="btn-register">
                     سجّل بياناتك الآن
                   </a>
                 </div>
@@ -708,8 +689,7 @@
                 </div>
 
                 <div class="btn-div">
-                  <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                    onclick="setProject('Sodic All In House')">
+                  <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="btn-register">
                     سجّل بياناتك الآن
                   </a>
                 </div>
@@ -769,8 +749,7 @@
                 </div>
 
                 <div class="btn-div">
-                  <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                    onclick="setProject('Sodic All In House')">
+                  <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="btn-register">
                     سجّل بياناتك الآن
                   </a>
                 </div>
@@ -810,8 +789,7 @@
                 </div>
 
                 <div class="btn-div">
-                  <a href="#" class="btn-register" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                    onclick="setProject('Sodic All In House')">
+                  <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="btn-register">
                     سجّل بياناتك الآن
                   </a>
                 </div>
@@ -834,51 +812,57 @@
       <div class="container">
         <div class="row gy-4">
 
-          <!-- About -->
+          <!-- Brand -->
           <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center justify-content-center justify-content-md-start">
-              <span class="sitename">مدينة مصر</span>
+            <a href="index.html" class="footer-brand-logo">
+              <img src="assets/img/logo.webp" alt="مدينة مصر للإسكان والتعمير" loading="lazy">
             </a>
 
-            <p class="mt-3">
-              مدينة مصر للإسكان والتعمير من أبرز المطورين العقاريين في مصر بخبرة تتجاوز
-              20 عامًا، تقدّم مجتمعات عمرانية متكاملة تجمع بين الجودة والابتكار والرؤية
-              العصرية في أرقى المواقع الاستراتيجية داخل الجمهورية.
+            <h3 class="footer-brand-name">مدينة مصر للإسكان والتعمير</h3>
+
+            <p class="footer-brand-tagline">
+              رائدة في التطوير العقاري المتميز
             </p>
-
-          </div>
-
-          <!-- Useful Links -->
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>روابط سريعة</h4>
-            <ul>
-              <li><i class="bi bi-chevron-left"></i> <a href="#hero">الرئيسية</a></li>
-              <li><i class="bi bi-chevron-left"></i> <a href="#about">من نحن</a></li>
-              <li><i class="bi bi-chevron-left"></i> <a href="#projects">المشروعات</a></li>
-              <li><i class="bi bi-chevron-left"></i> <a href="#why">لماذا مدينة مصر</a></li>
-              <li><i class="bi bi-chevron-left"></i> <a href="#contact-cta">تواصل معنا</a></li>
-            </ul>
           </div>
 
           <!-- Projects -->
-          <div class="col-lg-3 col-md-3 footer-links">
-            <h4>مشروعات مدينة مصر</h4>
+          <div class="col-lg-3 col-md-4 footer-links">
+            <h4>مشاريعنا</h4>
             <ul>
-              <li><i class="bi bi-chevron-left"></i> <a href="#sarai">كمبوند سراي</a></li>
-              <li><i class="bi bi-chevron-left"></i> <a href="#tajcity">كمبوند تاج سيتي</a></li>
-              <li><i class="bi bi-chevron-left"></i> <a href="#butterfly">The Butterfly</a></li>
-              <li><i class="bi bi-chevron-left"></i> <a href="#talala">TALALA</a></li>
+              <li><a href="#projects">كمبوند Sarai</a></li>
+              <li><a href="#projects">كمبوند Taj City</a></li>
+              <li><a href="#projects">كمبوند The Butterfly</a></li>
+              <li><a href="#projects">كمبوند TALALA</a></li>
             </ul>
           </div>
 
-          <!-- Locations -->
-          <div class="col-lg-3 col-md-12 footer-links">
-            <h4>مواقعنا</h4>
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-4 footer-links">
+            <h4>روابط سريعة</h4>
             <ul>
-              <li><i class="bi bi-geo-alt"></i> القاهرة الجديدة – التجمع الخامس</li>
-              <li><i class="bi bi-geo-alt"></i> امتداد التجمع الخامس</li>
-              <li><i class="bi bi-geo-alt"></i> شرق القاهرة – أمام المطار</li>
-              <li><i class="bi bi-geo-alt"></i> الساحل الشمالي – رأس الحكمة</li>
+              <li><a href="#hero">الرئيسية</a></li>
+              <li><a href="#about">من نحن</a></li>
+              <li><a href="#projects">مشاريعنا</a></li>
+              <li><a href="#why">لماذا نحن</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-3 col-md-4 footer-links footer-contact">
+            <h4>تواصل معنا</h4>
+            <ul>
+              <li>
+                <a href="tel:+201552454773" class="footer-contact-item">
+                  <span class="contact-icon"><i class="bi bi-telephone-fill"></i></span>
+                  <span class="contact-text">+201552454773</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/201552454773" target="_blank" rel="noopener" class="footer-contact-item">
+                  <span class="contact-icon"><i class="bi bi-whatsapp"></i></span>
+                  <span class="contact-text">واتس اب</span>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -945,85 +929,22 @@
 
   </footer>
 
-  <div class="modal modal-lg fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel"
-    aria-hidden="true">
-    <div class="modal-dialog-centered modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-
-          <div class="col-lg-20">
-
-            <form onsubmit="handleSubmit(event, currentProject)" class="custom-register-form" data-aos="fade-up"
-              data-aos-delay="200">
-
-
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <h3 style="font-weight: bold; margin: 0 auto;">سجّل الآن</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                  style="margin-right: 10px;"></button>
-              </div>
-
-              <p style="text-align: center;">
-                اكتشف مشروعات مدينة مصر في أفضل المواقع داخل مصر واحجز وحدتك الآن.
-              </p>
-
-
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder=" الاسم الكامل" dir="rtl" required>
-                </div>
-
-                <div class="col-md-6">
-                  <input type="tel" name="phone" class="form-control" placeholder=" رقم الهاتف" dir="rtl" required>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <button type="submit" class="btn-register">
-                    <i class="bi bi-person-check"></i> سجّل الآن
-                  </button>
-                </div>
-
-                <div class="col-md-12">
-                  <p style="font-size: 10px; text-align: center; color: #666; margin-top: 15px; line-height: 1.5;">
-                    URE is an independent real estate consultancy and authorized brokerage firm.
-                    We are not the primary developer of the projects listed on this website.
-                    All logos and brand names are the property of their respective owners (SODIC)
-                    and are used here for marketing purposes under our official partnership agreement.
-                  </p>
-                </div>
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
   <div id="preloader" class="d-none"></div>
 
-  <script>
-    let currentProject = 'Madinet Masr - All Projects';
-    function setProject(projectName) {
-      currentProject = projectName;
-    }
+  <!-- Floating Contact Buttons -->
+  <div class="floating-contact" aria-label="Contact options">
+    <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="fc-btn fc-whatsapp" aria-label="WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="tel:+201000000000" class="fc-btn fc-call" aria-label="Call">
+      <i class="bi bi-telephone-fill"></i>
+    </a>
+  </div>
 
-    // Mobile nav toggle
-    const _toggle = document.getElementById('ureMobileToggle');
-    const _menu   = document.getElementById('ureMobileMenu');
-    if (_toggle && _menu) {
-      _toggle.addEventListener('click', function () {
-        _toggle.classList.toggle('open');
-        _menu.classList.toggle('open');
-      });
-    }
-
-    function setProject(projectName) {
-      currentProject = projectName;
-    }
-  </script>
+  
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
