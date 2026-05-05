@@ -45,30 +45,30 @@
 
     <div class="container-fluid container-xl header-inner" dir="rtl">
 
-      <!-- Right side (RTL start): WhatsApp CTA -->
+      <!-- Right side (RTL start): Logo -->
       <div class="header-side header-side-start">
+        <a href="#hero" class="header-brand" aria-label="مدينة مصر">
+          <img src="assets/img/logo.webp" alt="مدينة مصر للإسكان والتعمير">
+        </a>
+      </div>
+
+      <!-- Center: Desktop nav links (project names) -->
+      <nav class="ure-navmenu d-none d-lg-flex align-items-center" dir="rtl">
+        <a href="#hero" class="active">الرئيسية</a>
+        <a href="#projects">
+          Sarai
+        </a>
+        <a href="#projects">Taj City</a>
+        <a href="#projects">Butterfly</a>
+        <a href="#projects">TALALA</a>
+      </nav>
+
+      <!-- Left side (RTL end): WhatsApp CTA + Hamburger -->
+      <div class="header-side header-side-end">
         <a class="btn-getstarted btn-whatsapp" href="https://wa.me/201552454773" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
           <i class="bi bi-whatsapp" aria-hidden="true"></i>
           <span class="btn-label">استفسر الآن</span>
         </a>
-      </div>
-
-      <!-- Center: Desktop nav links -->
-      <nav class="ure-navmenu d-none d-lg-flex align-items-center">
-        <a href="#hero" class="active">الرئيسية</a>
-        <a href="#projects">مشاريعنا</a>
-        <a href="#about">من نحن</a>
-        <a href="#why">لماذا نحن</a>
-        <a href="#contact-cta">تواصل معنا</a>
-      </nav>
-
-      <!-- Center: Mobile-only logo -->
-      <a href="#hero" class="header-mobile-logo d-lg-none" aria-label="مدينة مصر">
-        <img src="assets/img/logo.webp" alt="مدينة مصر">
-      </a>
-
-      <!-- Left side (RTL end): Hamburger on mobile -->
-      <div class="header-side header-side-end">
         <button class="ure-mobile-toggle d-lg-none" id="ureMobileToggle" aria-label="القائمة">
           <span></span><span></span><span></span>
         </button>
@@ -262,7 +262,6 @@
           <article class="project-show-card" data-aos="fade-up" data-aos-delay="0">
             <div class="img-wrap">
               <img src="assets/img/sarai.jpg" alt="كمبوند سراي - مدينة مصر" loading="lazy">
-              <span class="new-badge">لونش جديد</span>
               <div class="meta-top">
                 <span class="meta-pill"><i class="bi bi-geo-alt-fill"></i> القاهرة الجديدة</span>
                 <span class="meta-pill"><i class="bi bi-bounding-box"></i> +500 فدان</span>
@@ -296,7 +295,6 @@
           <article class="project-show-card" data-aos="fade-up" data-aos-delay="80">
             <div class="img-wrap">
               <img src="assets/img/tajcity.jpg" alt="كمبوند تاج سيتي - مدينة مصر" loading="lazy">
-              <span class="new-badge">لونش جديد</span>
               <div class="meta-top">
                 <span class="meta-pill"><i class="bi bi-geo-alt-fill"></i> القاهرة الجديدة</span>
                 <span class="meta-pill"><i class="bi bi-bounding-box"></i> +900 فدان</span>
@@ -330,7 +328,6 @@
           <article class="project-show-card" data-aos="fade-up" data-aos-delay="160">
             <div class="img-wrap">
               <img src="assets/img/butterfly.jpg" alt="The Butterfly - مدينة مصر" loading="lazy">
-              <span class="new-badge">لونش جديد</span>
               <div class="meta-top">
                 <span class="meta-pill"><i class="bi bi-geo-alt-fill"></i> شرق القاهرة</span>
                 <span class="meta-pill"><i class="bi bi-stars"></i> طرح أول</span>
@@ -364,7 +361,6 @@
           <article class="project-show-card" data-aos="fade-up" data-aos-delay="240">
             <div class="img-wrap">
               <img src="assets/img/talala.webp" alt="TALALA - مدينة مصر" loading="lazy">
-              <span class="new-badge">لونش جديد</span>
               <div class="meta-top">
                 <span class="meta-pill"><i class="bi bi-geo-alt-fill"></i> رأس الحكمة</span>
                 <span class="meta-pill"><i class="bi bi-water"></i> ساحلي فاخر</span>
@@ -412,86 +408,182 @@
 
         <div class="gallery-grid">
 
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="0">
+          <a href="assets/img/sarai.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="0">
             <img src="assets/img/sarai.jpg" alt="كمبوند سراي" loading="lazy">
             <div class="gallery-overlay">
               <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
               <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
-          </div>
+          </a>
 
 
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="60">
+          <a href="assets/img/east/1.webp" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="60">
             <img src="assets/img/east/1.webp" alt="مشروعات مدينة مصر" loading="lazy">
             <div class="gallery-overlay">
               <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
               <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
-          </div>
+          </a>
 
 
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="120">
+          <a href="assets/img/east/2.webp" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="120">
             <img src="assets/img/east/2.webp" alt="مدينة مصر" loading="lazy">
             <div class="gallery-overlay">
               <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
               <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
-          </div>
+          </a>
 
 
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="0">
+          <a href="assets/img/butterfly.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="0">
             <img src="assets/img/butterfly.jpg" alt="The Butterfly" loading="lazy">
             <div class="gallery-overlay">
               <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
               <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
-          </div>
+          </a>
 
 
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="60">
+          <a href="assets/img/tajcity.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="60">
             <img src="assets/img/tajcity.jpg" alt="كمبوند تاج سيتي" loading="lazy">
             <div class="gallery-overlay">
               <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
               <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
-          </div>
+          </a>
 
 
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="120">
+          <a href="assets/img/talala.webp" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="120">
             <img src="assets/img/talala.webp" alt="منتجع TALALA" loading="lazy">
             <div class="gallery-overlay">
               <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
               <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
-          </div>
+          </a>
 
 
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="0">
+          <a href="assets/img/new/1.png" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="0">
             <img src="assets/img/new/1.png" alt="مشروعات سكنية" loading="lazy">
             <div class="gallery-overlay">
               <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
               <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
-          </div>
+          </a>
 
 
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="60">
+          <a href="assets/img/new/2.png" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="60">
             <img src="assets/img/new/2.png" alt="مجتمعات متكاملة" loading="lazy">
             <div class="gallery-overlay">
               <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
               <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
-          </div>
+          </a>
 
 
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="120">
+          <a href="assets/img/ogami/1.webp" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="120">
             <img src="assets/img/ogami/1.webp" alt="مدينة مصر للإسكان والتعمير" loading="lazy">
             <div class="gallery-overlay">
               <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
               <span class="gallery-overlay-text">عرض بحجم كامل</span>
             </div>
-          </div>
+          </a>
 
+
+        <a href="assets/img/gallary/imageye___-_imgi_3_saraihover-1024x576.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="0">
+            <img src="assets/img/gallary/imageye___-_imgi_3_saraihover-1024x576.jpg" alt="كمبوند سراي" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
+
+          <a href="assets/img/gallary/imageye___-_imgi_14_s1-1.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="60">
+            <img src="assets/img/gallary/imageye___-_imgi_14_s1-1.jpg" alt="مشروع سراي - منظر 1" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
+
+          <a href="assets/img/gallary/imageye___-_imgi_13_s2-1.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="120">
+            <img src="assets/img/gallary/imageye___-_imgi_13_s2-1.jpg" alt="مشروع سراي - منظر 2" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
+
+          <a href="assets/img/gallary/imageye___-_imgi_16_s3-1.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="0">
+            <img src="assets/img/gallary/imageye___-_imgi_16_s3-1.jpg" alt="مشروع سراي - منظر 3" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
+
+          <a href="assets/img/gallary/imageye___-_imgi_12_s6.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="60">
+            <img src="assets/img/gallary/imageye___-_imgi_12_s6.jpg" alt="مشروع سراي - فيلات" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
+
+          <a href="assets/img/gallary/imageye___-_imgi_2_tajhover-1024x576.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="120">
+            <img src="assets/img/gallary/imageye___-_imgi_2_tajhover-1024x576.jpg" alt="كمبوند تاج سيتي" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
+
+          <a href="assets/img/gallary/imageye___-_imgi_10_taj-1.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="0">
+            <img src="assets/img/gallary/imageye___-_imgi_10_taj-1.jpg" alt="تاج سيتي - منظر عام" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
+
+          <a href="assets/img/gallary/imageye___-_imgi_33_tajhover-768x432.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="60">
+            <img src="assets/img/gallary/imageye___-_imgi_33_tajhover-768x432.jpg" alt="تاج سيتي - تفاصيل" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
+
+          <a href="assets/img/gallary/imageye___-_imgi_5_taj-apts.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="120">
+            <img src="assets/img/gallary/imageye___-_imgi_5_taj-apts.jpg" alt="تاج سيتي - شقق" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
+
+          <a href="assets/img/gallary/imageye___-_imgi_6_taj-town.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="0">
+            <img src="assets/img/gallary/imageye___-_imgi_6_taj-town.jpg" alt="تاج سيتي - تاون هاوس" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
+
+          <a href="assets/img/gallary/imageye___-_imgi_7_taj-twin-1.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="60">
+            <img src="assets/img/gallary/imageye___-_imgi_7_taj-twin-1.jpg" alt="تاج سيتي - توين هاوس" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
+
+          <a href="assets/img/gallary/imageye___-_imgi_8_taj-standalone.jpg" class="gallery-item glightbox" data-gallery="madinet-masr" data-aos="fade-up" data-aos-delay="120">
+            <img src="assets/img/gallary/imageye___-_imgi_8_taj-standalone.jpg" alt="تاج سيتي - فيلات مستقلة" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></span>
+              <span class="gallery-overlay-text">عرض بحجم كامل</span>
+            </div>
+          </a>
 
         </div>
       </div>
@@ -945,6 +1037,20 @@
   </div>
 
   
+
+  <script>
+    // Mobile nav toggle
+    (function(){
+      var t = document.getElementById('ureMobileToggle');
+      var m = document.getElementById('ureMobileMenu');
+      if (t && m) {
+        t.addEventListener('click', function(){
+          t.classList.toggle('open');
+          m.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

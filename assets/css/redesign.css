@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6{
   letter-spacing: -0.01em;
   line-height: 1.18;
 }
-h2{ font-weight: 700; }
+h2{ font-weight: 500; }
 
 p{ color: var(--ink-2); line-height: 1.85; }
 
@@ -78,6 +78,15 @@ a{ color: var(--blue-mid); transition: color var(--dur-1) var(--ease-out); }
 a:hover{ color: var(--red); }
 
 ::selection{ background: var(--red); color:#fff; }
+
+/* Lighter font weights — remove bold across the site */
+strong, b{ font-weight: 500 !important; }
+h1, h2, h3, h4, h5, h6{ font-weight: 500 !important; }
+.hero-headline, .about-main-title, .why-main-title,
+.projects-showcase-header h2, .gallery-v2 h2,
+.cta-banner h2, .footer-brand-name{
+  font-weight: 600 !important;
+}
 
 img{ display:block; max-width:100%; }
 
@@ -134,7 +143,7 @@ html{ scroll-behavior: smooth; }
   border: 1px solid var(--red) !important;
   padding: 12px 28px !important;
   border-radius: var(--r-pill) !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   font-size: 0.95rem !important;
   letter-spacing: 0.01em;
   display: inline-flex;
@@ -209,7 +218,7 @@ html{ scroll-behavior: smooth; }
   padding: 14px 22px;
   display:block;
   margin-top: 20px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* ---------- 4. HERO (split layout) ---------- */
@@ -245,7 +254,7 @@ html{ scroll-behavior: smooth; }
 /* Headline */
 #hero.hero h1.hero-headline{
   font-size: clamp(2rem, 4.6vw, 3.6rem) !important;
-  font-weight: 900 !important;
+  font-weight: 400 !important;
   color: var(--ink) !important;
   line-height: 1.18;
   letter-spacing: -0.02em;
@@ -305,7 +314,7 @@ html{ scroll-behavior: smooth; }
 }
 .hero-stat .num{
   font-size: 1.85rem;
-  font-weight: 900;
+  font-weight: 400;
   color: var(--red);
   line-height: 1;
   letter-spacing: -0.02em;
@@ -375,7 +384,7 @@ html{ scroll-behavior: smooth; }
   color: #fff !important;
   padding: 14px 30px !important;
   border-radius: var(--r-pill) !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   text-decoration: none !important;
   display: inline-flex;
   align-items: center;
@@ -398,7 +407,7 @@ html{ scroll-behavior: smooth; }
   color: var(--blue) !important;
   padding: 14px 30px !important;
   border-radius: var(--r-pill) !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   text-decoration: none !important;
   display: inline-flex;
   align-items: center;
@@ -415,7 +424,7 @@ html{ scroll-behavior: smooth; }
 }
 
 /* Tilted image */
-.hero-img-col{ position: relative; }
+.hero-img-col{ position: relative; display: flex; justify-content: center; }
 .hero-img-tilt{
   position: relative;
   border-radius: 28px;
@@ -424,11 +433,13 @@ html{ scroll-behavior: smooth; }
   box-shadow: 0 30px 80px -22px rgba(10,37,64,.32);
   animation: tilt-in 1000ms var(--ease-out) 200ms backwards;
   transition: transform 600ms var(--ease-out);
+  width: 80%;
+  max-width: 460px;
 }
 .hero-img-tilt:hover{ transform: rotate(-1.2deg) translateY(-4px); }
 .hero-img-tilt img{
   width: 100%;
-  height: clamp(380px, 60vh, 600px);
+  height: clamp(280px, 42vh, 420px);
   object-fit: cover;
   display: block;
 }
@@ -508,14 +519,14 @@ html{ scroll-behavior: smooth; }
 .section-title{ position: relative; }
 .section-title h2{
   font-size: clamp(1.6rem, 3vw, 2.5rem) !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   margin-bottom: 8px !important;
 }
 .section-title h2::before{
   content: "—";
   color: var(--red);
   margin-left: 10px;
-  font-weight: 700;
+  font-weight: 500;
 }
 .section-title p{
   color: var(--ink-3);
@@ -543,7 +554,7 @@ html{ scroll-behavior: smooth; }
 }
 .ure-gallery-title{
   font-size: clamp(1.6rem, 3vw, 2.4rem) !important;
-  font-weight: 800;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 12px;
 }
@@ -574,7 +585,7 @@ html{ scroll-behavior: smooth; }
   display: inline-block;
   background: rgba(255,255,255,.95);
   color: var(--ink) !important;
-  font-weight: 700;
+  font-weight: 500;
   padding: 8px 22px;
   border-radius: var(--r-pill);
   letter-spacing: 0.02em;
@@ -623,7 +634,7 @@ html{ scroll-behavior: smooth; }
 }
 .lavista-mini-locations h4{
   color: var(--ink) !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   letter-spacing: 0.02em;
 }
 .lavista-mini-locations h4::after{
@@ -669,7 +680,7 @@ html{ scroll-behavior: smooth; }
   padding: 3px 8px;
   border-radius: var(--r-pill);
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 .locations-list a.location-new small{ background: var(--red); color:#fff; }
 
@@ -690,7 +701,7 @@ html{ scroll-behavior: smooth; }
   padding: 6px 14px;
   border-radius: var(--r-pill);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 18px;
@@ -709,7 +720,7 @@ html{ scroll-behavior: smooth; }
 
 .new-launch-section h2{
   font-size: clamp(1.7rem, 3vw, 2.6rem) !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   margin-bottom: 6px;
   color: var(--ink) !important;
 }
@@ -833,7 +844,7 @@ html{ scroll-behavior: smooth; }
 }
 .project-content h3{
   font-size: 1.4rem;
-  font-weight: 800;
+  font-weight: 500;
   margin: 0 0 10px;
   color: var(--ink) !important;
 }
@@ -919,7 +930,7 @@ html{ scroll-behavior: smooth; }
 #staticBackdrop .modal-body{ padding: 36px !important; }
 #staticBackdrop h3{
   color: var(--ink) !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   font-size: 1.45rem !important;
 }
 #staticBackdrop p{ color: var(--ink-3); }
@@ -996,7 +1007,7 @@ html{ scroll-behavior: smooth; }
 }
 .footer-brand-name{
   color: #fff !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   font-size: 1.7rem !important;
   margin: 0 0 14px;
   line-height: 1.3;
@@ -1012,7 +1023,7 @@ html{ scroll-behavior: smooth; }
 .footer h4{
   color: #fff !important;
   font-size: 1.25rem !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   margin: 0 0 26px !important;
   padding: 0 !important;
   text-align: right;
@@ -1214,13 +1225,13 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   padding: 8px 28px;
   border-radius: var(--r-pill);
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.04em;
   margin-bottom: 24px;
 }
 .about-v2 .about-main-title{
   font-size: clamp(1.9rem, 4.4vw, 3.4rem) !important;
-  font-weight: 900 !important;
+  font-weight: 400 !important;
   color: var(--blue) !important;
   margin: 0 0 22px;
   line-height: 1.2;
@@ -1237,7 +1248,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 /* Story title (right column) */
 .about-v2 .about-story-title{
   font-size: clamp(1.4rem, 2.4vw, 2rem) !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   color: var(--blue) !important;
   margin: 0 0 22px;
   position: relative;
@@ -1260,7 +1271,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   line-height: 2;
   margin-bottom: 18px;
 }
-.about-v2 p strong{ color: var(--ink); font-weight: 700; }
+.about-v2 p strong{ color: var(--ink); font-weight: 500; }
 
 /* Feature cards (left column) */
 .about-feature-card{
@@ -1289,7 +1300,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 }
 .about-feature-card h4{
   font-size: 1.1rem !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   color: var(--blue) !important;
   margin: 0 0 6px !important;
 }
@@ -1349,7 +1360,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 }
 .about-quality-badge strong{
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 500;
   color: #fff;
 }
 .about-quality-badge span{
@@ -1376,7 +1387,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   font-size: 0.82rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 14px;
   padding-bottom: 8px;
   position: relative;
@@ -1390,7 +1401,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 }
 .about-section .section-h2{
   font-size: clamp(1.7rem, 3vw, 2.4rem) !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   margin-bottom: 22px;
   color: var(--ink) !important;
   line-height: 1.2;
@@ -1431,13 +1442,13 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 .about-stat-num{
   color: var(--red);
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 1;
 }
 .about-stat-label{
   color: var(--ink-2);
   font-size: 0.88rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* ---------- 17a-v3. PROJECTS SHOWCASE ---------- */
@@ -1455,13 +1466,13 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   padding: 8px 28px;
   border-radius: var(--r-pill);
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.04em;
   margin-bottom: 22px;
 }
 .projects-showcase-header h2{
   font-size: clamp(1.9rem, 4.4vw, 3.2rem) !important;
-  font-weight: 900 !important;
+  font-weight: 400 !important;
   color: var(--blue) !important;
   margin: 0 0 18px;
   line-height: 1.2;
@@ -1529,7 +1540,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   padding: 6px 14px;
   border-radius: var(--r-pill);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 500;
   z-index: 2;
   box-shadow: 0 8px 18px -6px rgba(37,211,102,.5);
 }
@@ -1556,7 +1567,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   padding: 6px 12px;
   border-radius: var(--r-pill);
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 400;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -1582,7 +1593,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   color: var(--blue) !important;
   padding: 12px 26px;
   border-radius: var(--r-pill);
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none !important;
   display: inline-flex;
   align-items: center;
@@ -1614,7 +1625,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 }
 .project-show-card h3{
   color: var(--blue) !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   font-size: 1.3rem !important;
   margin: 0 0 12px !important;
   line-height: 1.3;
@@ -1642,7 +1653,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   padding: 6px 12px;
   border-radius: var(--r-pill);
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 400;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -1660,7 +1671,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   flex: 1;
   padding: 11px 16px;
   border-radius: var(--r-pill);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.9rem;
   text-decoration: none !important;
   display: inline-flex;
@@ -1712,13 +1723,13 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   padding: 8px 28px;
   border-radius: var(--r-pill);
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.04em;
   margin-bottom: 22px;
 }
 .gallery-v2 h2{
   font-size: clamp(1.9rem, 4.4vw, 3.2rem) !important;
-  font-weight: 900 !important;
+  font-weight: 400 !important;
   color: var(--blue) !important;
   margin: 0 0 16px;
   line-height: 1.2;
@@ -1749,6 +1760,9 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   box-shadow: 0 14px 36px -22px rgba(10,37,64,.18);
   transition: transform var(--dur-2) var(--ease-out),
               box-shadow var(--dur-2) var(--ease-out);
+  cursor: pointer;
+  display: block;
+  text-decoration: none !important;
 }
 .gallery-item:hover{
   transform: translateY(-4px);
@@ -1798,7 +1812,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 }
 .gallery-overlay-text{
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #fff;
   letter-spacing: 0.02em;
   transform: translateY(8px);
@@ -1823,7 +1837,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 }
 .why-v2 .why-main-title{
   font-size: clamp(1.9rem, 4.4vw, 3rem) !important;
-  font-weight: 900 !important;
+  font-weight: 400 !important;
   color: var(--blue) !important;
   margin: 0 0 56px;
   text-align: center;
@@ -1879,7 +1893,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 }
 .why-v2 .why-card h3{
   font-size: 1.2rem !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   margin: 0 0 14px !important;
   color: var(--blue) !important;
 }
@@ -1915,7 +1929,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 .cta-banner h2{
   color: #fff !important;
   font-size: clamp(1.7rem, 3vw, 2.6rem) !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   margin-bottom: 12px;
 }
 .cta-banner p{
@@ -1934,7 +1948,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   color: #fff !important;
   padding: 14px 32px;
   border-radius: var(--r-pill);
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none !important;
   display: inline-flex;
   align-items: center;
@@ -1948,7 +1962,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   color: #fff !important;
   padding: 14px 32px;
   border-radius: var(--r-pill);
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none !important;
   border: 1px solid rgba(255,255,255,.5);
   display: inline-flex;
@@ -1986,7 +2000,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   transition: transform var(--dur-1) var(--ease-out);
 }
 .fc-btn::before{
-  /* Outer halo ring */
+  /* Outer halo ring (static) */
   content: "";
   position: absolute;
   inset: -10px;
@@ -1995,12 +2009,41 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   z-index: -1;
 }
 .fc-btn::after{
+  /* Animated pulse ring */
   content: "";
   position: absolute;
-  inset: -10px;
+  inset: 0;
   border-radius: 50%;
-  border: 2px solid rgba(0,0,0,0.06);
+  border: 2px solid currentColor;
   z-index: -1;
+  animation: fc-pulse 2.2s var(--ease-out) infinite;
+}
+.fc-btn.fc-whatsapp::after{ color: #25d366; }
+.fc-btn.fc-call::after    { color: #1a3460; }
+
+@keyframes fc-pulse{
+  0%   { transform: scale(1);   opacity: 0.7; }
+  70%  { transform: scale(1.7); opacity: 0; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* Gentle breathing bounce on the icon */
+.fc-btn i{
+  animation: fc-breathe 2.4s var(--ease-out) infinite;
+}
+.fc-btn.fc-call i{
+  animation-delay: 0.3s;
+}
+
+@keyframes fc-breathe{
+  0%, 100% { transform: scale(1) rotate(0); }
+  50%      { transform: scale(1.12) rotate(-6deg); }
+}
+
+/* Pause animations on hover so the button feels responsive */
+.fc-btn:hover::after,
+.fc-btn:hover i{
+  animation-play-state: paused;
 }
 .fc-btn.fc-whatsapp{
   background: #25d366;
@@ -2058,34 +2101,111 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 .header-side-start{ justify-content: flex-start; }
 .header-side-end  { justify-content: flex-end; }
 
-/* Desktop: keep nav truly centered with absolute positioning */
+/* Desktop: 3-column grid layout (right logo / center nav / left CTA) */
 @media (min-width: 992px){
-  .header-inner{ min-height: 72px; }
-  .ure-navmenu{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  .header, #header.header{
+    padding: 10px 0 !important;
+    background: #fff !important;
   }
-  .header-side{ min-width: 200px; }
+  .header-inner{
+    display: grid !important;
+    grid-template-columns: minmax(220px, 1fr) auto minmax(220px, 1fr);
+    align-items: center;
+    min-height: 88px;
+    padding-inline: 32px;
+    gap: 24px;
+    position: relative;
+  }
+  .header-inner > .header-side-start{
+    grid-column: 1;
+    justify-self: start;
+  }
+  .header-inner > .ure-navmenu{
+    grid-column: 2;
+    justify-self: center;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    gap: 40px !important;
+  }
+  .header-inner > .header-side-end{
+    grid-column: 3;
+    justify-self: end;
+  }
+  .ure-navmenu a{
+    padding: 26px 0 !important;
+    font-size: 1.02rem !important;
+    font-weight: 500 !important;
+    color: #000 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+  .ure-navmenu a:hover{ color: var(--red) !important; -webkit-text-fill-color: var(--red) !important; }
+  .ure-navmenu a.active{
+    color: #000 !important;
+    font-weight: 500 !important;
+  }
+  .ure-navmenu a::after{
+    bottom: 14px !important;
+  }
+  .header-brand img{ height: 64px; }
+  .header .btn-getstarted.btn-whatsapp{
+    padding: 14px 28px !important;
+    font-size: 1rem !important;
+    height: auto !important;
+    border-radius: var(--r-pill) !important;
+  }
 }
 
-/* Mobile logo (centered) */
-.header-mobile-logo{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+@media (min-width: 1280px){
+  .ure-navmenu{ gap: 48px !important; }
+}
+
+/* Brand logo (right side, all viewports) */
+.header-brand{
   display: inline-flex;
   align-items: center;
   text-decoration: none !important;
-  pointer-events: auto;
-  z-index: 1;
+  flex-shrink: 0;
 }
-.header-mobile-logo img{
-  height: 38px;
+.header-brand img{
+  height: 56px;
   width: auto;
   display: block;
+  transition: transform var(--dur-1) var(--ease-out);
+}
+.header-brand:hover img{ transform: scale(1.04); }
+@media (max-width: 991px){
+  .header-brand img{ height: 40px; }
+}
+@media (max-width: 480px){
+  .header-brand img{ height: 34px; }
+}
+
+/* Nav item badge */
+.ure-navmenu a.nav-with-badge{
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  padding-left: 4px !important;
+}
+.nav-badge{
+  background: #25d366;
+  color: #fff !important;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px -4px rgba(37,211,102,.5);
+  display: inline-block;
+}
+.ure-navmenu a.nav-with-badge::after{
+  display: none !important;
 }
 
 /* ---------- MOBILE HEADER (≤991px) ---------- */
@@ -2116,7 +2236,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
     height: 44px !important;
     padding: 0 16px !important;
     font-size: 0.88rem !important;
-    font-weight: 700 !important;
+    font-weight: 500 !important;
     gap: 8px !important;
     white-space: nowrap !important;
     display: inline-flex !important;
@@ -2191,23 +2311,35 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   }
 }
 
-/* Mobile drawer — white panel */
+/* Mobile drawer — white panel, off-screen by default, hidden on desktop */
 .ure-mobile-menu{
   background: #ffffff !important;
   color: var(--ink) !important;
   padding: 92px 28px 32px !important;
-  display: flex;
   flex-direction: column;
   gap: 28px;
-  position: fixed;
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  width: min(82vw, 380px);
+  height: 100vh;
+  display: flex;
+  transform: translateX(100%); /* off-screen to the right (RTL drawer) */
+  transition: transform 360ms var(--ease-out);
+  z-index: 1050;
+  overflow-y: auto;
 }
 .ure-mobile-menu.open{
+  transform: translateX(0);
   box-shadow: -24px 0 60px -10px rgba(10,37,64,.18);
+}
+@media (min-width: 992px){
+  .ure-mobile-menu{ display: none !important; }
 }
 
 .ure-drawer-eyebrow{
   color: var(--red) !important;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.22em;
   font-size: 0.78rem;
   text-transform: uppercase;
@@ -2241,7 +2373,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   align-items: center;
   justify-content: space-between;
   font-size: 1.15rem !important;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none !important;
   transition: color var(--dur-1) var(--ease-out),
               padding var(--dur-2) var(--ease-out);
@@ -2275,7 +2407,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   justify-content: center;
   gap: 8px;
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 500;
   box-shadow: 0 14px 32px -10px rgba(37,211,102,.55);
   transition: background var(--dur-1) var(--ease-out), transform var(--dur-1) var(--ease-out);
 }
@@ -2299,7 +2431,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 }
 .ure-drawer-brand em{
   font-style: normal;
-  font-weight: 800;
+  font-weight: 500;
   color: var(--blue);
   display: block;
   font-size: 1rem;
@@ -2344,7 +2476,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 .ure-navmenu{ gap: 22px; }
 .ure-navmenu a{
   color: var(--blue) !important;
-  font-weight: 600;
+  font-weight: 400;
   padding: 22px 6px !important;
   font-size: 1rem;
   border-radius: 0 !important;
