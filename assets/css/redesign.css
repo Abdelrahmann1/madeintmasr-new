@@ -1287,6 +1287,23 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   transition: transform var(--dur-2) var(--ease-out),
               box-shadow var(--dur-2) var(--ease-out),
               border-color var(--dur-2) var(--ease-out);
+  position: relative;
+  /* Hidden until in view */
+  opacity: 0;
+  transform: translateX(28px) scale(.97);
+}
+.about-feature-card.is-in{
+  animation: about-pulse-in 800ms var(--ease-out) forwards;
+}
+.about-feature-card.is-in:nth-of-type(1){ animation-delay: 0ms; }
+.about-feature-card.is-in:nth-of-type(2){ animation-delay: 130ms; }
+.about-feature-card.is-in:nth-of-type(3){ animation-delay: 260ms; }
+
+@keyframes about-pulse-in{
+  0%   { opacity: 0; transform: translateX(28px) scale(.97); }
+  55%  { opacity: 1; transform: translateX(-6px) scale(1.03); box-shadow: 0 24px 50px -22px rgba(20,70,122,.32); }
+  75%  { transform: translateX(2px) scale(.99); }
+  100% { opacity: 1; transform: translateX(0) scale(1); box-shadow: 0 16px 40px -22px rgba(10,37,64,.22); }
 }
 .about-feature-card:last-child{ margin-bottom: 0; }
 .about-feature-card:hover{
@@ -1504,16 +1521,124 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   overflow: hidden;
   border: 1px solid var(--hairline);
   box-shadow: 0 18px 44px -22px rgba(10,37,64,.18);
-  transition: transform var(--dur-2) var(--ease-out),
-              box-shadow var(--dur-2) var(--ease-out),
-              border-color var(--dur-2) var(--ease-out);
+  transition: transform 480ms var(--ease-out),
+              box-shadow 480ms var(--ease-out),
+              border-color 320ms var(--ease-out);
   display: flex;
   flex-direction: column;
+  position: relative;
+  /* Hidden until scroll-into-view */
+  opacity: 0;
+  transform: translateY(28px) scale(.94);
+}
+/* When in view (added by reveal.js IntersectionObserver) — pulse-in */
+.project-show-card.is-in{
+  animation: card-pulse-in 900ms var(--ease-out) forwards;
+}
+.project-show-card.is-in:nth-of-type(1){ animation-delay: 0ms; }
+.project-show-card.is-in:nth-of-type(2){ animation-delay: 140ms; }
+.project-show-card.is-in:nth-of-type(3){ animation-delay: 280ms; }
+.project-show-card.is-in:nth-of-type(4){ animation-delay: 420ms; }
+
+@keyframes card-pulse-in{
+  0%   { opacity: 0; transform: translateY(28px) scale(.94); }
+  55%  { opacity: 1; transform: translateY(-6px) scale(1.04); box-shadow: 0 30px 60px -22px rgba(20,70,122,.32); }
+  75%  { transform: translateY(2px) scale(.99); }
+  100% { opacity: 1; transform: translateY(0) scale(1); box-shadow: 0 18px 44px -22px rgba(10,37,64,.18); }
+}
+
+/* Continuous gentle pulse-glow on the card while at rest */
+.project-show-card.is-in::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  pointer-events: none;
+  box-shadow: 0 0 0 0 rgba(20,70,122,0);
+  animation: card-resting-pulse 3.6s var(--ease-out) infinite;
+  animation-delay: 1.2s;
+  z-index: 0;
+}
+.project-show-card:nth-of-type(1).is-in::after{ animation-delay: 1.2s; }
+.project-show-card:nth-of-type(2).is-in::after{ animation-delay: 1.5s; }
+.project-show-card:nth-of-type(3).is-in::after{ animation-delay: 1.8s; }
+.project-show-card:nth-of-type(4).is-in::after{ animation-delay: 2.1s; }
+.project-show-card:hover::after{ animation-play-state: paused; }
+
+@keyframes card-resting-pulse{
+  0%   { box-shadow: 0 0 0 0 rgba(20,70,122,.18); }
+  60%  { box-shadow: 0 0 0 12px rgba(20,70,122,0); }
+  100% { box-shadow: 0 0 0 0 rgba(20,70,122,0); }
+}
+
+/* Soft outer glow that animates on hover */
+.project-show-card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  pointer-events: none;
+  box-shadow: 0 0 0 0 rgba(10,37,64,0);
+  transition: box-shadow 600ms var(--ease-out);
+  z-index: 0;
 }
 .project-show-card:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 26px 56px -22px rgba(10,37,64,.28);
+  transform: translateY(-10px) scale(1.012);
+  box-shadow: 0 32px 64px -22px rgba(10,37,64,.32);
   border-color: var(--blue-tint);
+}
+.project-show-card:hover::before{
+  box-shadow: 0 0 0 6px rgba(20,70,122,.06);
+}
+
+/* Image: subtle Ken-Burns at rest, brighter zoom on hover */
+.project-show-card .img-wrap img{
+  animation: card-img-drift 14s ease-in-out infinite alternate;
+}
+.project-show-card:hover .img-wrap img{
+  animation-play-state: paused;
+}
+@keyframes card-img-drift{
+  0%   { transform: scale(1.02) translate(0, 0); }
+  100% { transform: scale(1.06) translate(-1.5%, -1%); }
+}
+
+/* Title shifts on hover */
+.project-show-card h3{
+  transition: color var(--dur-1) var(--ease-out),
+              transform 360ms var(--ease-out);
+}
+.project-show-card:hover h3{
+  color: var(--red) !important;
+  transform: translateX(-3px); /* RTL: subtle slide outward */
+}
+
+/* Tags lift in sequence on hover */
+.project-show-card .tag{
+  transition: transform 320ms var(--ease-out),
+              background var(--dur-1) var(--ease-out),
+              border-color var(--dur-1) var(--ease-out);
+}
+.project-show-card:hover .tag:nth-child(1){ transform: translateY(-2px); transition-delay: 0ms; }
+.project-show-card:hover .tag:nth-child(2){ transform: translateY(-2px); transition-delay: 60ms; }
+
+/* Action buttons gentle pop on card hover */
+.project-show-card:hover .btn-whatsapp-card{
+  box-shadow: 0 10px 22px -10px rgba(37,211,102,.55);
+}
+.project-show-card:hover .btn-details{
+  border-color: var(--blue);
+  background: var(--blue-tint);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .project-show-card{
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  .project-show-card .img-wrap img{ animation: none; }
 }
 
 .project-show-card .img-wrap{
@@ -1625,10 +1750,11 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 }
 .project-show-card h3{
   color: var(--blue) !important;
-  font-weight: 500 !important;
-  font-size: 1.3rem !important;
+  font-weight: 800 !important;
+  font-size: 1.35rem !important;
   margin: 0 0 12px !important;
   line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 .project-show-card .desc{
   color: var(--ink-3);
@@ -1763,6 +1889,51 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   cursor: pointer;
   display: block;
   text-decoration: none !important;
+  /* Hidden until in view */
+  opacity: 0;
+  transform: translateY(24px) scale(.95);
+}
+.gallery-item.is-in{
+  animation: gallery-pulse-in 800ms var(--ease-out) forwards;
+}
+/* Stagger by column position (3-col grid) */
+.gallery-item.is-in:nth-child(3n+1){ animation-delay: 0ms; }
+.gallery-item.is-in:nth-child(3n+2){ animation-delay: 100ms; }
+.gallery-item.is-in:nth-child(3n+3){ animation-delay: 200ms; }
+
+@keyframes gallery-pulse-in{
+  0%   { opacity: 0; transform: translateY(24px) scale(.95); }
+  55%  { opacity: 1; transform: translateY(-4px) scale(1.03); box-shadow: 0 24px 48px -22px rgba(20,70,122,.32); }
+  75%  { transform: translateY(2px) scale(.99); }
+  100% { opacity: 1; transform: translateY(0) scale(1); box-shadow: 0 14px 36px -22px rgba(10,37,64,.18); }
+}
+
+/* Resting pulse-glow on gallery items (subtle) */
+.gallery-item.is-in::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  pointer-events: none;
+  box-shadow: 0 0 0 0 rgba(20,70,122,0);
+  animation: gallery-resting-pulse 4s var(--ease-out) infinite;
+  z-index: 0;
+}
+.gallery-item.is-in:nth-child(3n+1)::before{ animation-delay: 1.4s; }
+.gallery-item.is-in:nth-child(3n+2)::before{ animation-delay: 1.7s; }
+.gallery-item.is-in:nth-child(3n+3)::before{ animation-delay: 2.0s; }
+.gallery-item:hover::before{ animation-play-state: paused; }
+
+@keyframes gallery-resting-pulse{
+  0%   { box-shadow: 0 0 0 0 rgba(20,70,122,.14); }
+  60%  { box-shadow: 0 0 0 10px rgba(20,70,122,0); }
+  100% { box-shadow: 0 0 0 0 rgba(20,70,122,0); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .gallery-item{ opacity: 1; transform: none; }
+  .gallery-item.is-in{ animation: none; }
+  .gallery-item.is-in::before{ animation: none; }
 }
 .gallery-item:hover{
   transform: translateY(-4px);
@@ -1867,6 +2038,50 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   transition: transform var(--dur-2) var(--ease-out),
               border-color var(--dur-2) var(--ease-out),
               box-shadow var(--dur-2) var(--ease-out);
+  position: relative;
+  /* Hidden until in view */
+  opacity: 0;
+  transform: translateY(28px) scale(.94);
+}
+.why-v2 .why-card.is-in{
+  animation: why-pulse-in 850ms var(--ease-out) forwards;
+}
+.why-v2 .why-card.is-in:nth-child(3n+1){ animation-delay: 0ms; }
+.why-v2 .why-card.is-in:nth-child(3n+2){ animation-delay: 130ms; }
+.why-v2 .why-card.is-in:nth-child(3n+3){ animation-delay: 260ms; }
+
+@keyframes why-pulse-in{
+  0%   { opacity: 0; transform: translateY(28px) scale(.94); }
+  55%  { opacity: 1; transform: translateY(-6px) scale(1.04); box-shadow: 0 26px 52px -22px rgba(20,70,122,.32); }
+  75%  { transform: translateY(2px) scale(.99); }
+  100% { opacity: 1; transform: translateY(0) scale(1); box-shadow: 0 14px 36px -22px rgba(10,37,64,.18); }
+}
+
+/* Resting pulse ring */
+.why-v2 .why-card.is-in::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  pointer-events: none;
+  box-shadow: 0 0 0 0 rgba(20,70,122,0);
+  animation: why-resting-pulse 4s var(--ease-out) infinite;
+  z-index: 0;
+}
+.why-v2 .why-card.is-in:nth-child(3n+1)::before{ animation-delay: 1.4s; }
+.why-v2 .why-card.is-in:nth-child(3n+2)::before{ animation-delay: 1.7s; }
+.why-v2 .why-card.is-in:nth-child(3n+3)::before{ animation-delay: 2.0s; }
+.why-v2 .why-card:hover::before{ animation-play-state: paused; }
+
+@keyframes why-resting-pulse{
+  0%   { box-shadow: 0 0 0 0 rgba(20,70,122,.16); }
+  60%  { box-shadow: 0 0 0 12px rgba(20,70,122,0); }
+  100% { box-shadow: 0 0 0 0 rgba(20,70,122,0); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .why-v2 .why-card{ opacity: 1; transform: none; }
+  .why-v2 .why-card.is-in, .why-v2 .why-card.is-in::before{ animation: none; }
 }
 .why-v2 .why-card:hover{
   border-color: var(--blue);
@@ -2311,6 +2526,34 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
   }
 }
 
+/* Drawer close (X) button */
+.ure-drawer-close{
+  position: absolute;
+  top: 18px;
+  left: 18px; /* RTL: visually on left */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  border: 0;
+  color: #000;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: background var(--dur-1) var(--ease-out),
+              transform var(--dur-1) var(--ease-out),
+              color var(--dur-1) var(--ease-out);
+}
+.ure-drawer-close:hover{
+  background: var(--red);
+  color: #fff;
+  transform: rotate(90deg);
+}
+.ure-drawer-close i{ line-height: 1; }
+
 /* Mobile drawer — white panel, off-screen by default, hidden on desktop */
 .ure-mobile-menu{
   background: #ffffff !important;
@@ -2366,33 +2609,38 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible{
 }
 .ure-drawer-nav a{
   position: relative;
-  color: var(--blue) !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  opacity: 1 !important;
   border-bottom: 1px solid var(--hairline) !important;
   padding: 20px 0 20px 14px !important;
   display: flex !important;
   align-items: center;
   justify-content: space-between;
   font-size: 1.15rem !important;
-  font-weight: 400;
+  font-weight: 500;
   text-decoration: none !important;
+  text-shadow: none !important;
   transition: color var(--dur-1) var(--ease-out),
               padding var(--dur-2) var(--ease-out);
 }
 .ure-drawer-nav a::after{
   content: "\F285"; /* bi-chevron-left */
   font-family: "bootstrap-icons";
-  color: var(--ink-3);
-  font-size: 0.95rem;
+  color: #000 !important;
+  font-size: 1.05rem;
+  font-weight: 700;
   transition: transform var(--dur-2) var(--ease-out),
               color var(--dur-1) var(--ease-out);
 }
 .ure-drawer-nav a:hover,
 .ure-drawer-nav a:active{
   color: var(--red) !important;
+  -webkit-text-fill-color: var(--red) !important;
   padding-right: 10px !important;
 }
 .ure-drawer-nav a:hover::after{
-  color: var(--red);
+  color: var(--red) !important;
   transform: translateX(-4px);
 }
 

@@ -19,7 +19,7 @@
   }
 
   /* ---------- Scroll reveal observer ---------- */
-  const targets = document.querySelectorAll('[data-reveal], .section-title, .new-launch-section, .project-card');
+  const targets = document.querySelectorAll('[data-reveal], .section-title, .new-launch-section, .project-card, .project-show-card, .gallery-item, .why-card, .about-feature-card');
 
   if (reduced || !('IntersectionObserver' in window)) {
     // Reveal everything immediately
